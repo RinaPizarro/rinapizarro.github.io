@@ -442,40 +442,8 @@ print 'It took ' + i + ' iterations to sort the deck.';
 									</form>
 								</section>
 
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="generic.html">Generic</a></li>
-										<li><a href="elements.html">Elements</a></li>
-										<li>
-											<span class="opener">Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Etiam Dolore</a></li>
-										<li><a href="#">Adipiscing</a></li>
-										<li>
-											<span class="opener">Another Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Maximus Erat</a></li>
-										<li><a href="#">Sapien Mauris</a></li>
-										<li><a href="#">Amet Lacinia</a></li>
-									</ul>
-								</nav>
+							<!-- Shared Menu -->
+								<div id="sidebar-menu"></div>
 
 							<!-- Section -->
 								<section>
@@ -531,6 +499,18 @@ print 'It took ' + i + ' iterations to sort the deck.';
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<!-- Load Shared Sidebar Menu -->
+			<script>
+				fetch('menu_sidebar.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('sidebar-menu').innerHTML = data;
+					})
+					.catch(error => {
+						console.error('Error loading sidebar:', error);
+					});
+			</script>
 
 	</body>
 </html>
