@@ -241,11 +241,25 @@
 					document.getElementById('sidebar-menu').innerHTML = data;
 
 					$('#menu .opener').each(function() {
+
 						var $this = $(this);
 
-						$this.on('click', function() {
+						$this.on('click', function(event) {
+
+							event.preventDefault();
+							event.stopPropagation();
+
+							var $parent = $this.parent();
+
+							$parent
+								.siblings()
+								.children('.opener')
+								.removeClass('active');
+
 							$this.toggleClass('active');
+
 						});
+
 					});
 				})
 				.catch(error => {
