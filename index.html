@@ -1,115 +1,166 @@
 <!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license
+-->
 <html>
-<head>
-	<title>Analyst Studios</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-</head>
+	<head>
+		<title>Analyst Studios</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
 
-<body class="is-preload">
+	<body class="is-preload">
 
-	<div id="wrapper">
+		<div id="wrapper">
 
-		<!-- Main -->
-		<div id="main">
-			<div class="inner">
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
 
-				<!-- Header -->
-				<header id="header">
-					<a href="index.html" class="logo">
-						<strong>Analyst Studios</strong>
-					</a>
-				</header>
+					<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">
+							<strong>Analyst Studios</strong>
+						</a>
+					</header>
 
-				<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h1>Analyst Studios</h1>
-							<p>A data analytics portfolio</p>
+					<!-- Banner -->
+					<section id="banner">
+						<div class="content">
+							<header>
+								<h1>Analyst Studios</h1>
+								<p>A data analytics portfolio</p>
+							</header>
+
+							<p>
+								Hi there! Welcome to my data analytics portfolio. Here, I share my knowledge and experience in the field of data analysis, including projects, tutorials, and insights. Explore the site to learn more about my work and expertise.
+							</p>
+
+						</div>
+
+						<span class="image object">
+							<img src="images/pic10.jpg" alt="" />
+						</span>
+					</section>
+
+					<!-- Section -->
+					<section>
+						<header class="major">
+							<h2>Skills &amp; Tools</h2>
 						</header>
 
-						<p>
-							Hi there! Welcome to my data analytics portfolio.
-							Here, I share my knowledge and experience in the field
-							of data analysis, including projects, tutorials, and
-							insights. Explore the site to learn more about my work
-							and expertise.
-						</p>
-					</div>
+						<div class="features">
 
-					<span class="image object">
-						<img src="images/pic10.jpg" alt="Analyst Studios" />
-					</span>
-				</section>
+							<article>
+								<span class="icon fa-gem"></span>
+								<div class="content">
+									<h3>Data Analytics</h3>
+									<p>
+										Data analysis, visualization, reporting, and
+										data-driven insights.
+									</p>
+								</div>
+							</article>
 
-				<!-- Skills & Tools -->
-				<section>
-					<header class="major">
-						<h2>Skills &amp; Tools</h2>
-					</header>
+							<article>
+								<span class="icon solid fa-database"></span>
+								<div class="content">
+									<h3>SQL</h3>
+									<p>
+										SQL querying, joins, aggregations, filtering,
+										and database analysis.
+									</p>
+								</div>
+							</article>
 
-					<div class="features">
+							<article>
+								<span class="icon solid fa-chart-bar"></span>
+								<div class="content">
+									<h3>Power BI</h3>
+									<p>
+										Dashboards, KPI tracking, data modeling,
+										visualizations, and DAX.
+									</p>
+								</div>
+							</article>
 
-						<article>
-							<span class="icon fa-gem"></span>
-							<div class="content">
-								<h3>Data Analytics</h3>
-								<p>
-									Data analysis, visualization, reporting, and
-									data-driven insights.
-								</p>
-							</div>
-						</article>
+							<article>
+								<span class="icon solid fa-code"></span>
+								<div class="content">
+									<h3>Python</h3>
+									<p>
+										Data analysis and visualization using Python,
+										Pandas, and Jupyter Notebook.
+									</p>
+								</div>
+							</article>
 
-						<article>
-							<span class="icon solid fa-database"></span>
-							<div class="content">
-								<h3>SQL</h3>
-								<p>
-									SQL querying, joins, aggregations, filtering,
-									and database analysis.
-								</p>
-							</div>
-						</article>
+						</div>
+					</section>
 
-						<article>
-							<span class="icon solid fa-chart-bar"></span>
-							<div class="content">
-								<h3>Power BI</h3>
-								<p>
-									Dashboards, KPI tracking, data modeling,
-									visualizations, and DAX.
-								</p>
-							</div>
-						</article>
+					<!-- Section -->
+					<section>
+						<header class="major">
+							<h2>Recent Articles</h2>
+						</header>
 
-						<article>
-							<span class="icon solid fa-code"></span>
-							<div class="content">
-								<h3>Python</h3>
-								<p>
-									Data analysis and visualization using Python,
-									Pandas, and Jupyter Notebook.
-								</p>
-							</div>
-						</article>
+						<div class="posts">
 
-					</div>
-				</section>
+	{% for post in site.posts %}
+	<article>
+		<a href="{{ post.url | relative_url }}" class="image">
+			<img src="{{ post.image | relative_url }}" alt="{{ post.title }}" />
+		</a>
+		<h3>{{ post.title }}</h3>
+		<p>{{ post.description }}</p>
+		<ul class="actions">
+			<li><a href="{{ post.url | relative_url }}" class="button">View Project</a></li>
+		</ul>
+	</article>
+	{% endfor %}
 
-				<!-- Recent Articles / Projects -->
-				<section>
-					<header class="major">
-						<h2>Recent Articles</h2>
-					</header>
+						</div>
 
-					<div class="posts">
+						<ul class="actions">
+							<li>
+								<a href="blog.html" class="button">View All Articles</a>
+							</li>
+						</ul>
+					</section>
+				</div>
+			
+			<!-- Sidebar -->
+			<div id="sidebar">
+				<div class="inner">
 
-						{% if site.posts.size > 0 %}
+					<!-- Search -->
+					<section id="search" class="alt">
+						<form method="post" action="#">
+							<input
+								type="text"
+								name="query"
+								id="query"
+								placeholder="Search"
+							/>
+						</form>
+					</section>
 
-							{% for post in site.posts limit:6 %}
+					<!-- Shared Sidebar Menu -->
+					<div id="sidebar-menu"></div>
+
+					<!-- Section -->
+					<section>
+						<header class="major">
+							<h2>Featured</h2>
+						</header>
+
+						<div class="mini-posts">
+
+							{% for post in site.posts limit:3 %}
+
 							<article>
 
 								{% if post.image %}
@@ -118,197 +169,114 @@
 								</a>
 								{% endif %}
 
-								<h3>{{ post.title }}</h3>
+								<p>
+									<a href="{{ post.url | relative_url }}">
+										<strong>{{ post.title }}</strong>
+									</a>
+								</p>
 
 								{% if post.description %}
-								<p>{{ post.description }}</p>
-								{% else %}
 								<p>
-									{{ post.excerpt | strip_html | truncate: 150 }}
+									{{ post.description }}
 								</p>
 								{% endif %}
 
-								<ul class="actions">
-									<li>
-										<a href="{{ post.url | relative_url }}" class="button">
-											View Project
-										</a>
-									</li>
-								</ul>
-
 							</article>
+
 							{% endfor %}
 
-						{% else %}
+						</div>
 
-							<p>
-								No projects have been published yet.
-							</p>
+						<ul class="actions">
+							<li>
+								<a href="blog.html" class="button">More</a>
+							</li>
+						</ul>
+					</section>
 
-						{% endif %}
+					<!-- Contact -->
+					<section>
+						<header class="major">
+							<h2>Get in touch</h2>
+						</header>
 
-					</div>
+						<p>
+							Interested in data analytics, quality assurance,
+							or collaborating on a project?
+						</p>
 
-					<ul class="actions">
-						<li>
-							<a href="blog.html" class="button">
-								View All Articles
-							</a>
-						</li>
-					</ul>
-				</section>
+						<ul class="contact">
+							<li class="icon solid fa-envelope">
+								<a href="mailto:information@untitled.tld">
+									information@untitled.tld
+								</a>
+							</li>
 
+							<li class="icon solid fa-phone">
+								(000) 000-0000
+							</li>
+
+							<li class="icon solid fa-home">
+								United States
+							</li>
+						</ul>
+					</section>
+
+					<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">
+							&copy; Analyst Studios. All rights reserved.
+							Design:
+							<a href="https://html5up.net">HTML5 UP</a>.
+						</p>
+					</footer>
+
+				</div>
 			</div>
+
 		</div>
 
-		<!-- Sidebar -->
-		<div id="sidebar">
-			<div class="inner">
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
-				<!-- Search -->
-				<section id="search" class="alt">
-					<form method="post" action="#">
-						<input
-							type="text"
-							name="query"
-							id="query"
-							placeholder="Search"
-						/>
-					</form>
-				</section>
+		<!-- Load Shared Sidebar Menu -->
+		<script>
+			fetch('menu_sidebar.html')
+				.then(response => {
+					if (!response.ok) {
+						throw new Error('Could not load menu_sidebar.html');
+					}
+					return response.text();
+				})
+				.then(data => {
+					document.getElementById('sidebar-menu').innerHTML = data;
 
-				<!-- Shared Sidebar Menu -->
-				<div id="sidebar-menu"></div>
+					$('#menu .opener').each(function() {
+						var $this = $(this);
 
-				<!-- Featured -->
-				<section>
-					<header class="major">
-						<h2>Featured</h2>
-					</header>
+						$this.on('click', function(event) {
+							event.preventDefault();
+							event.stopPropagation();
 
-					<div class="mini-posts">
+							var $parent = $this.parent();
 
-						<article>
-							<a href="#" class="image">
-								<img src="images/pic07.jpg" alt="" />
-							</a>
-							<p>
-								Data analytics, visualization, and reporting projects.
-							</p>
-						</article>
+							$parent
+								.siblings()
+								.children('.opener')
+								.removeClass('active');
 
-						<article>
-							<a href="#" class="image">
-								<img src="images/pic08.jpg" alt="" />
-							</a>
-							<p>
-								Explore dashboards and data-driven insights.
-							</p>
-						</article>
-
-						<article>
-							<a href="#" class="image">
-								<img src="images/pic09.jpg" alt="" />
-							</a>
-							<p>
-								View projects and learn more about my experience.
-							</p>
-						</article>
-
-					</div>
-
-					<ul class="actions">
-						<li>
-							<a href="blog.html" class="button">
-								More
-							</a>
-						</li>
-					</ul>
-				</section>
-
-				<!-- Contact -->
-				<section>
-					<header class="major">
-						<h2>Get in touch</h2>
-					</header>
-
-					<p>
-						Interested in data analytics, quality assurance,
-						or collaborating on a project?
-					</p>
-
-					<ul class="contact">
-						<li class="icon solid fa-envelope">
-							<a href="mailto:information@untitled.tld">
-								information@untitled.tld
-							</a>
-						</li>
-
-						<li class="icon solid fa-phone">
-							(000) 000-0000
-						</li>
-
-						<li class="icon solid fa-home">
-							United States
-						</li>
-					</ul>
-				</section>
-
-				<!-- Footer -->
-				<footer id="footer">
-					<p class="copyright">
-						&copy; Analyst Studios. All rights reserved.
-						Design:
-						<a href="https://html5up.net">HTML5 UP</a>.
-					</p>
-				</footer>
-
-			</div>
-		</div>
-
-	</div>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
-	<!-- Load Shared Sidebar Menu -->
-	<script>
-		fetch('menu_sidebar.html')
-			.then(response => {
-				if (!response.ok) {
-					throw new Error('Could not load menu_sidebar.html');
-				}
-				return response.text();
-			})
-			.then(data => {
-				document.getElementById('sidebar-menu').innerHTML = data;
-
-				$('#menu .opener').each(function() {
-					var $this = $(this);
-
-					$this.on('click', function(event) {
-						event.preventDefault();
-						event.stopPropagation();
-
-						var $parent = $this.parent();
-
-						$parent
-							.siblings()
-							.children('.opener')
-							.removeClass('active');
-
-						$this.toggleClass('active');
+							$this.toggleClass('active');
+						});
 					});
+				})
+				.catch(error => {
+					console.error('Error loading sidebar:', error);
 				});
-			})
-			.catch(error => {
-				console.error('Error loading sidebar:', error);
-			});
-	</script>
+		</script>
 
-</body>
+	</body>
 </html>
