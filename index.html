@@ -111,7 +111,7 @@
 
 						<div class="posts">
 
-							{% for post in site.posts %}
+							{% for post in site.posts limit:6 %}
 							<article>
 
 								<a href="{{ post.url | relative_url }}" class="image">

@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -31,15 +33,19 @@
 				</div>
 			</div>
 
+
 			<!-- Sidebar -->
 			<div id="sidebar">
+				<div class="inner">
 
-				<!-- Shared Sidebar -->
-				<div id="sidebar-menu"></div>
+					<!-- Shared Sidebar Menu -->
+					<div id="sidebar-menu"></div>
 
+				</div>
 			</div>
 
 		</div>
+
 
 		<!-- Scripts -->
 		<script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
@@ -48,18 +54,29 @@
 		<script src="{{ '/assets/js/util.js' | relative_url }}"></script>
 		<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
+
 		<!-- Load Shared Sidebar -->
 		<script>
 			fetch('{{ "/menu_sidebar.html" | relative_url }}')
 				.then(response => {
+
 					if (!response.ok) {
-						throw new Error('Could not load menu_sidebar.html');
+						throw new Error(
+							'Could not load menu_sidebar.html'
+						);
 					}
 
 					return response.text();
+
 				})
 				.then(data => {
-					document.getElementById('sidebar-menu').innerHTML = data;
+
+					document.getElementById(
+						'sidebar-menu'
+					).innerHTML = data;
+
+
+					/* Sidebar dropdowns */
 
 					$('#menu .opener').each(function() {
 
@@ -70,7 +87,8 @@
 							event.preventDefault();
 							event.stopPropagation();
 
-							var $parent = $this.parent();
+							var $parent =
+								$this.parent();
 
 							$parent
 								.siblings()
@@ -82,9 +100,15 @@
 						});
 
 					});
+
 				})
 				.catch(error => {
-					console.error('Error loading sidebar:', error);
+
+					console.error(
+						'Error loading sidebar:',
+						error
+					);
+
 				});
 		</script>
 
