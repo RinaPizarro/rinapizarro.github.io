@@ -20,31 +20,20 @@
 					<a href="index.html" class="logo">
 						<strong>Analyst Studios</strong>
 					</a>
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-					</ul>
 				</header>
 
 				<!-- Banner -->
 				<section id="banner">
 					<div class="content">
 						<header>
-							<h1>Hi, I’m Analyst Studios</h1>
+							<h1>Analyst Studios</h1>
 							<p>A data analytics portfolio</p>
 						</header>
 
 						<p>
-							Explore data analytics projects, dashboards, and insights
-							created using SQL, Python, Power BI, Tableau, and Excel.
+							Hi there! Welcome to my data analytics portfolio. Here, I share my knowledge and experience in the field of data analysis, including projects, tutorials, and insights. Explore the site to learn more about my work and expertise.
 						</p>
 
-						<ul class="actions">
-							<li><a href="#" class="button big">Learn More</a></li>
-						</ul>
 					</div>
 
 					<span class="image object">
@@ -115,96 +104,29 @@
 
 					<div class="posts">
 
-						<article>
-							<a href="#" class="image">
-								<img src="images/pic01.jpg" alt="" />
-							</a>
-							<h3>Customer Behavior Analysis</h3>
-							<p>
-								Analyzed customer transaction data using PostgreSQL
-								to identify purchasing patterns and trends.
-							</p>
-							<ul class="actions">
-								<li><a href="#" class="button">View Article</a></li>
-							</ul>
-						</article>
-
-						<article>
-							<a href="#" class="image">
-								<img src="images/pic02.jpg" alt="" />
-							</a>
-							<h3>Power BI Dashboard</h3>
-							<p>
-								Created interactive dashboards to track reports,
-								rejection reasons, approvals, and vendor errors.
-							</p>
-							<ul class="actions">
-								<li><a href="#" class="button">View Project</a></li>
-							</ul>
-						</article>
-
-						<article>
-							<a href="#" class="image">
-								<img src="images/pic03.jpg" alt="" />
-							</a>
-							<h3>Python Data Analysis</h3>
-							<p>
-								Used Python and Pandas to clean, analyze, and
-								visualize datasets.
-							</p>
-							<ul class="actions">
-								<li><a href="#" class="button">View Project</a></li>
-							</ul>
-						</article>
-
-						<article>
-							<a href="#" class="image">
-								<img src="images/pic04.jpg" alt="" />
-							</a>
-							<h3>Data Visualization</h3>
-							<p>
-								Designed visualizations and reports to communicate
-								key findings clearly.
-							</p>
-							<ul class="actions">
-								<li><a href="#" class="button">View Project</a></li>
-							</ul>
-						</article>
-
-						<article>
-							<a href="#" class="image">
-								<img src="images/pic05.jpg" alt="" />
-							</a>
-							<h3>University of Memphis App</h3>
-							<p>
-								Designed and developed a mobile game application
-								for international students.
-							</p>
-							<ul class="actions">
-								<li><a href="#" class="button">View Project</a></li>
-							</ul>
-						</article>
-
-						<article>
-							<a href="#" class="image">
-								<img src="images/pic06.jpg" alt="" />
-							</a>
-							<h3>Quality Assurance</h3>
-							<p>
-								Quality-focused work involving audits, compliance,
-								documentation, and process improvement.
-							</p>
-							<ul class="actions">
-								<li><a href="#" class="button">View Project</a></li>
-							</ul>
-						</article>
+		{% for post in site.posts %}
+		<article>
+			<a href="{{ post.url | relative_url }}" class="image">
+				<img src="{{ post.image | relative_url }}" alt="{{ post.title }}" />
+			</a>
+			<h3>{{ post.title }}</h3>
+			<p>{{ post.description }}</p>
+			<ul class="actions">
+				<li><a href="{{ post.url | relative_url }}" class="button">View Project</a></li>
+			</ul>
+		</article>
+		{% endfor %}
 
 					</div>
+
+					<ul class="actions">
+						<li>
+							<a href="blog.html" class="button">View All Articles</a>
+						</li>
+					</ul>
 				</section>
-
 			</div>
-		</div>
-
+			
 		<!-- Sidebar -->
 		<div id="sidebar">
 			<div class="inner">
