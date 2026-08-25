@@ -48,7 +48,7 @@
 						</span>
 					</section>
 
-					<!-- Section -->
+					<!-- Skills & Tools -->
 					<section>
 						<header class="major">
 							<h2>Skills &amp; Tools</h2>
@@ -103,7 +103,7 @@
 						</div>
 					</section>
 
-					<!-- Section -->
+					<!-- Recent Articles -->
 					<section>
 						<header class="major">
 							<h2>Recent Articles</h2>
@@ -149,111 +149,19 @@
 				</div>
 			</div>
 
+
 			<!-- Sidebar -->
 			<div id="sidebar">
 				<div class="inner">
 
-					<!-- Search -->
-					<section id="search" class="alt">
-						<form method="post" action="#">
-							<input
-								type="text"
-								name="query"
-								id="query"
-								placeholder="Search"
-							/>
-						</form>
-					</section>
-
-					<!-- Shared Sidebar Menu -->
-					<div id="sidebar-menu"></div>
-
-					<!-- Section -->
-					<section>
-						<header class="major">
-							<h2>Featured</h2>
-						</header>
-
-						<div class="mini-posts">
-
-							{% for post in site.posts limit:3 %}
-
-							<article>
-
-								{% if post.image %}
-								<a href="{{ post.url | relative_url }}" class="image">
-									<img src="{{ post.image | relative_url }}" alt="{{ post.title }}" />
-								</a>
-								{% endif %}
-
-								<p>
-									<a href="{{ post.url | relative_url }}">
-										<strong>{{ post.title }}</strong>
-									</a>
-								</p>
-
-								{% if post.description %}
-								<p>
-									{{ post.description }}
-								</p>
-								{% endif %}
-
-							</article>
-
-							{% endfor %}
-
-						</div>
-
-						<ul class="actions">
-							<li>
-								<a href="{{ '/blog.html' | relative_url }}" class="button">
-									More
-								</a>
-							</li>
-						</ul>
-					</section>
-
-					<!-- Contact -->
-					<section>
-						<header class="major">
-							<h2>Get in touch</h2>
-						</header>
-
-						<p>
-							Interested in data analytics, quality assurance,
-							or collaborating on a project?
-						</p>
-
-						<ul class="contact">
-							<li class="icon solid fa-envelope">
-								<a href="mailto:information@untitled.tld">
-									information@untitled.tld
-								</a>
-							</li>
-
-							<li class="icon solid fa-phone">
-								(000) 000-0000
-							</li>
-
-							<li class="icon solid fa-home">
-								United States
-							</li>
-						</ul>
-					</section>
-
-					<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">
-							&copy; Analyst Studios. All rights reserved.
-							Design:
-							<a href="https://html5up.net">HTML5 UP</a>.
-						</p>
-					</footer>
+					<!-- Shared Sidebar -->
+					<div id="sidebar-content"></div>
 
 				</div>
 			</div>
 
 		</div>
+
 
 		<!-- Scripts -->
 		<script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
@@ -262,26 +170,41 @@
 		<script src="{{ '/assets/js/util.js' | relative_url }}"></script>
 		<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
-		<!-- Load Shared Sidebar Menu -->
+
+		<!-- Load Shared Sidebar -->
 		<script>
 			fetch('{{ "/menu_sidebar.html" | relative_url }}')
 				.then(response => {
+
 					if (!response.ok) {
-						throw new Error('Could not load menu_sidebar.html');
+						throw new Error(
+							'Could not load menu_sidebar.html'
+						);
 					}
+
 					return response.text();
+
 				})
 				.then(data => {
-					document.getElementById('sidebar-menu').innerHTML = data;
+
+					document.getElementById(
+						'sidebar-content'
+					).innerHTML = data;
+
+
+					/* Sidebar dropdowns */
 
 					$('#menu .opener').each(function() {
+
 						var $this = $(this);
 
 						$this.on('click', function(event) {
+
 							event.preventDefault();
 							event.stopPropagation();
 
-							var $parent = $this.parent();
+							var $parent =
+								$this.parent();
 
 							$parent
 								.siblings()
@@ -289,11 +212,19 @@
 								.removeClass('active');
 
 							$this.toggleClass('active');
+
 						});
+
 					});
+
 				})
 				.catch(error => {
-					console.error('Error loading sidebar:', error);
+
+					console.error(
+						'Error loading sidebar:',
+						error
+					);
+
 				});
 		</script>
 
