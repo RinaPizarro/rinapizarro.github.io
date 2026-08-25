@@ -1,0 +1,349 @@
+---
+---
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Power Automate - Analyst Studios</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+</head>
+
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="{{ '/' | relative_url }}" class="logo">
+                        <strong>Analyst Studios</strong>
+                    </a>
+                </header>
+
+                <!-- Content -->
+                <section>
+
+                    <header class="main">
+                        <h1>Power Automate</h1>
+                    </header>
+
+                    <!-- powerautomate Posts -->
+                    {% assign powerautomate_posts = site.categories.powerautomate %}
+
+                    <div id="powerautomate-posts">
+
+                        {% for post in powerautomate_posts %}
+
+                        <article class="powerautomate-post">
+
+                            <h2>
+                                <a href="{{ post.url | relative_url }}">
+                                    {{ post.title }}
+                                </a>
+                            </h2>
+
+                            <p>
+                                {{ post.excerpt }}
+                            </p>
+
+                        </article>
+
+                        {% endfor %}
+
+                    </div>
+
+
+                    <!-- Pagination -->
+                    {% if powerautomate_posts.size > 10 %}
+
+                    <h4>Pagination</h4>
+
+                    <ul class="pagination" id="pagination">
+                    </ul>
+
+                    {% endif %}
+
+                </section>
+
+            </div>
+        </div>
+
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <!-- Shared Sidebar Menu -->
+                <div id="sidebar-menu"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/browser.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/breakpoints.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/util.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+
+    <!-- Pagination Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const posts = document.querySelectorAll(".powerautomate-post");
+
+            const postsPerPage = 10;
+
+            const totalPages = Math.ceil(
+                posts.length / postsPerPage
+            );
+
+            let currentPage = 1;
+
+            const pagination =
+                document.getElementById("pagination");
+
+
+            if (!pagination || posts.length === 0) {
+                return;
+            }
+
+
+            function showPage(page) {
+
+                currentPage = page;
+
+                const start =
+                    (page - 1) * postsPerPage;
+
+                const end =
+                    start + postsPerPage;
+
+
+                posts.forEach(function (post, index) {
+
+                    if (index >= start && index < end) {
+                        post.style.display = "";
+                    } else {
+                        post.style.display = "none";
+                    }
+
+                });
+
+
+                renderPagination();
+
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+
+
+            function renderPagination() {
+
+                pagination.innerHTML = "";
+
+
+                /* Previous */
+
+                const previous =
+                    document.createElement("li");
+
+
+                if (currentPage === 1) {
+
+                    previous.innerHTML =
+                        '<span class="button disabled">Prev</span>';
+
+                } else {
+
+                    previous.innerHTML =
+                        '<a href="#" class="button">Prev</a>';
+
+                    previous
+                        .querySelector("a")
+                        .addEventListener(
+                            "click",
+                            function (event) {
+
+                                event.preventDefault();
+
+                                showPage(
+                                    currentPage - 1
+                                );
+
+                            }
+                        );
+
+                }
+
+
+                pagination.appendChild(previous);
+
+
+                /* Page Numbers */
+
+                for (
+                    let page = 1;
+                    page <= totalPages;
+                    page++
+                ) {
+
+                    const pageItem =
+                        document.createElement("li");
+
+
+                    if (page === currentPage) {
+
+                        pageItem.innerHTML =
+                            '<span class="page active">' +
+                            page +
+                            '</span>';
+
+                    } else {
+
+                        pageItem.innerHTML =
+                            '<a href="#" class="page">' +
+                            page +
+                            '</a>';
+
+
+                        pageItem
+                            .querySelector("a")
+                            .addEventListener(
+                                "click",
+                                function (event) {
+
+                                    event.preventDefault();
+
+                                    showPage(page);
+
+                                }
+                            );
+
+                    }
+
+
+                    pagination.appendChild(pageItem);
+
+                }
+
+
+                /* Next */
+
+                const next =
+                    document.createElement("li");
+
+
+                if (currentPage === totalPages) {
+
+                    next.innerHTML =
+                        '<span class="button disabled">Next</span>';
+
+                } else {
+
+                    next.innerHTML =
+                        '<a href="#" class="button">Next</a>';
+
+
+                    next
+                        .querySelector("a")
+                        .addEventListener(
+                            "click",
+                            function (event) {
+
+                                event.preventDefault();
+
+                                showPage(
+                                    currentPage + 1
+                                );
+
+                            }
+                        );
+
+                }
+
+
+                pagination.appendChild(next);
+
+            }
+
+
+            /* Start on page 1 */
+
+            showPage(1);
+
+        });
+    </script>
+
+
+    <!-- Load Shared Sidebar -->
+    <script>
+        fetch('{{ "/menu_sidebar.html" | relative_url }}')
+            .then(response => {
+
+                if (!response.ok) {
+                    throw new Error(
+                        'Could not load menu_sidebar.html'
+                    );
+                }
+
+                return response.text();
+
+            })
+            .then(data => {
+
+                document.getElementById(
+                    'sidebar-menu'
+                ).innerHTML = data;
+
+
+                /* Activate sidebar dropdowns */
+
+                $('#menu .opener').each(function() {
+
+                    var $this = $(this);
+
+                    $this.on('click', function(event) {
+
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        var $parent =
+                            $this.parent();
+
+                        $parent
+                            .siblings()
+                            .children('.opener')
+                            .removeClass('active');
+
+                        $this.toggleClass('active');
+
+                    });
+
+                });
+
+            })
+            .catch(error => {
+
+                console.error(
+                    'Error loading sidebar:',
+                    error
+                );
+
+            });
+    </script>
+
+</body>
+</html>
