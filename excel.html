@@ -1,396 +1,349 @@
 ---
 ---
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license
--->
 <html>
-	<head>
-		<title>Excel - Analyst Studios</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
-	</head>
+<head>
+    <title>Excel - Analyst Studios</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+</head>
 
-	<body class="is-preload">
+<body class="is-preload">
 
-		<div id="wrapper">
+    <div id="wrapper">
 
-			<!-- Main -->
-			<div id="main">
-				<div class="inner">
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
 
-					<!-- Header -->
-					<header id="header">
-						<a href="{{ '/' | relative_url }}" class="logo">
-							<strong>Analyst Studios</strong>
-						</a>
-					</header>
+                <!-- Header -->
+                <header id="header">
+                    <a href="{{ '/' | relative_url }}" class="logo">
+                        <strong>Analyst Studios</strong>
+                    </a>
+                </header>
 
-					<!-- Banner -->
-					<section id="banner">
-						<div class="content">
-							<header>
-								<h1>Analyst Studios</h1>
-								<p>A data analytics portfolio</p>
-							</header>
+                <!-- Content -->
+                <section>
 
-							<p>
-								Hi there! Welcome to my data analytics portfolio. Here, I share my knowledge and experience in the field of data analysis, including projects, tutorials, and insights. Explore the site to learn more about my work and expertise.
-							</p>
+                    <header class="main">
+                        <h1>Excel</h1>
+                    </header>
 
-						</div>
+                    <!-- Excel Posts -->
+                    {% assign excel_posts = site.categories.excel %}
 
-						<span class="image object">
-							<img src="{{ '/images/pic10.jpg' | relative_url }}" alt="" />
-						</span>
-					</section>
+                    <div id="excel-posts">
 
-					<!-- Excel Posts -->
-					<section>
+                        {% for post in excel_posts %}
 
-						<header class="major">
-							<h2>Excel</h2>
-						</header>
+                        <article class="excel-post">
 
-						{% assign excel_posts = site.categories.excel %}
+                            <h2>
+                                <a href="{{ post.url | relative_url }}">
+                                    {{ post.title }}
+                                </a>
+                            </h2>
 
-						<div class="posts" id="excel-posts">
+                            <p>
+                                {{ post.excerpt }}
+                            </p>
 
-							{% for post in excel_posts %}
+                        </article>
 
-							<article class="excel-post">
+                        {% endfor %}
 
-								{% if post.image %}
-								<a href="{{ post.url | relative_url }}" class="image">
-									<img src="{{ post.image | relative_url }}" alt="{{ post.title }}" />
-								</a>
-								{% endif %}
+                    </div>
 
-								<h3>{{ post.title }}</h3>
 
-								{% if post.description %}
-								<p>{{ post.description }}</p>
-								{% else %}
-								<p>{{ post.excerpt }}</p>
-								{% endif %}
+                    <!-- Pagination -->
+                    {% if excel_posts.size > 10 %}
 
-								<ul class="actions">
-									<li>
-										<a href="{{ post.url | relative_url }}" class="button">
-											View Post
-										</a>
-									</li>
-								</ul>
-
-							</article>
+                    <h4>Pagination</h4>
 
-							{% endfor %}
-
-						</div>
+                    <ul class="pagination" id="pagination">
+                    </ul>
 
-						<!-- Pagination -->
-						{% if excel_posts.size > 10 %}
-
-						<h4>Pagination</h4>
-
-						<ul class="pagination" id="pagination">
-						</ul>
-
-						{% endif %}
-
-					</section>
-
-				</div>
-			</div>
-
-			<!-- Sidebar -->
-			<div id="sidebar">
-				<div class="inner">
-
-					<!-- Search -->
-					<section id="search" class="alt">
-						<form method="post" action="#">
-							<input
-								type="text"
-								name="query"
-								id="query"
-								placeholder="Search"
-							/>
-						</form>
-					</section>
-
-					<!-- Shared Sidebar Menu -->
-					<div id="sidebar-menu"></div>
-
-					<!-- Section -->
-					<section>
-						<header class="major">
-							<h2>Featured</h2>
-						</header>
-
-						<div class="mini-posts">
-
-							{% for post in site.posts limit:3 %}
-
-							<article>
-
-								{% if post.image %}
-								<a href="{{ post.url | relative_url }}" class="image">
-									<img src="{{ post.image | relative_url }}" alt="{{ post.title }}" />
-								</a>
-								{% endif %}
-
-								<p>
-									<a href="{{ post.url | relative_url }}">
-										<strong>{{ post.title }}</strong>
-									</a>
-								</p>
-
-								{% if post.description %}
-								<p>
-									{{ post.description }}
-								</p>
-								{% endif %}
-
-							</article>
-
-							{% endfor %}
-
-						</div>
-
-						<ul class="actions">
-							<li>
-								<a href="{{ '/blog.html' | relative_url }}" class="button">More</a>
-							</li>
-						</ul>
-					</section>
+                    {% endif %}
 
-					<!-- Contact -->
-					<section>
-						<header class="major">
-							<h2>Get in touch</h2>
-						</header>
+                </section>
 
-						<p>
-							Interested in data analytics, quality assurance,
-							or collaborating on a project?
-						</p>
+            </div>
+        </div>
 
-						<ul class="contact">
-							<li class="icon solid fa-envelope">
-								<a href="mailto:information@untitled.tld">
-									information@untitled.tld
-								</a>
-							</li>
 
-							<li class="icon solid fa-phone">
-								(000) 000-0000
-							</li>
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
 
-							<li class="icon solid fa-home">
-								United States
-							</li>
-						</ul>
-					</section>
+                <!-- Shared Sidebar Menu -->
+                <div id="sidebar-menu"></div>
 
-					<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">
-							&copy; Analyst Studios. All rights reserved.
-							Design:
-							<a href="https://html5up.net">HTML5 UP</a>.
-						</p>
-					</footer>
+            </div>
+        </div>
 
-				</div>
-			</div>
+    </div>
 
-		</div>
 
-		<!-- Scripts -->
-		<script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
-		<script src="{{ '/assets/js/browser.min.js' | relative_url }}"></script>
-		<script src="{{ '/assets/js/breakpoints.min.js' | relative_url }}"></script>
-		<script src="{{ '/assets/js/util.js' | relative_url }}"></script>
-		<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <!-- Scripts -->
+    <script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/browser.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/breakpoints.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/util.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
-		<!-- Pagination -->
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
 
-				const posts = document.querySelectorAll(".excel-post");
-				const postsPerPage = 10;
-				const totalPages = Math.ceil(posts.length / postsPerPage);
-				let currentPage = 1;
+    <!-- Pagination Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
 
-				const pagination = document.getElementById("pagination");
+            const posts = document.querySelectorAll(".excel-post");
 
-				if (!pagination || posts.length === 0) {
-					return;
-				}
+            const postsPerPage = 10;
 
-				function showPage(page) {
+            const totalPages = Math.ceil(
+                posts.length / postsPerPage
+            );
 
-					currentPage = page;
+            let currentPage = 1;
 
-					const start = (page - 1) * postsPerPage;
-					const end = start + postsPerPage;
+            const pagination =
+                document.getElementById("pagination");
 
-					posts.forEach(function (post, index) {
 
-						if (index >= start && index < end) {
-							post.style.display = "";
-						} else {
-							post.style.display = "none";
-						}
+            if (!pagination || posts.length === 0) {
+                return;
+            }
 
-					});
 
-					renderPagination();
+            function showPage(page) {
 
-					window.scrollTo({
-						top: 0,
-						behavior: "smooth"
-					});
-				}
+                currentPage = page;
 
-				function renderPagination() {
+                const start =
+                    (page - 1) * postsPerPage;
 
-					pagination.innerHTML = "";
+                const end =
+                    start + postsPerPage;
 
-					/* Previous */
 
-					const previous = document.createElement("li");
+                posts.forEach(function (post, index) {
 
-					if (currentPage === 1) {
+                    if (index >= start && index < end) {
+                        post.style.display = "";
+                    } else {
+                        post.style.display = "none";
+                    }
 
-						previous.innerHTML =
-							'<span class="button disabled">Prev</span>';
+                });
 
-					} else {
 
-						previous.innerHTML =
-							'<a href="#" class="button">Prev</a>';
+                renderPagination();
 
-						previous.querySelector("a").addEventListener(
-							"click",
-							function (event) {
 
-								event.preventDefault();
-								showPage(currentPage - 1);
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
 
-							}
-						);
-					}
+            }
 
-					pagination.appendChild(previous);
 
+            function renderPagination() {
 
-					/* Page Numbers */
+                pagination.innerHTML = "";
 
-					for (let page = 1; page <= totalPages; page++) {
 
-						const pageItem = document.createElement("li");
+                /* Previous */
 
-						if (page === currentPage) {
+                const previous =
+                    document.createElement("li");
 
-							pageItem.innerHTML =
-								'<span class="page active">' +
-								page +
-								'</span>';
 
-						} else {
+                if (currentPage === 1) {
 
-							pageItem.innerHTML =
-								'<a href="#" class="page">' +
-								page +
-								'</a>';
+                    previous.innerHTML =
+                        '<span class="button disabled">Prev</span>';
 
-							pageItem.querySelector("a").addEventListener(
-								"click",
-								function (event) {
+                } else {
 
-									event.preventDefault();
-									showPage(page);
+                    previous.innerHTML =
+                        '<a href="#" class="button">Prev</a>';
 
-								}
-							);
-						}
+                    previous
+                        .querySelector("a")
+                        .addEventListener(
+                            "click",
+                            function (event) {
 
-						pagination.appendChild(pageItem);
-					}
+                                event.preventDefault();
 
+                                showPage(
+                                    currentPage - 1
+                                );
 
-					/* Next */
+                            }
+                        );
 
-					const next = document.createElement("li");
+                }
 
-					if (currentPage === totalPages) {
 
-						next.innerHTML =
-							'<span class="button disabled">Next</span>';
+                pagination.appendChild(previous);
 
-					} else {
 
-						next.innerHTML =
-							'<a href="#" class="button">Next</a>';
+                /* Page Numbers */
 
-						next.querySelector("a").addEventListener(
-							"click",
-							function (event) {
+                for (
+                    let page = 1;
+                    page <= totalPages;
+                    page++
+                ) {
 
-								event.preventDefault();
-								showPage(currentPage + 1);
+                    const pageItem =
+                        document.createElement("li");
 
-							}
-						);
-					}
 
-					pagination.appendChild(next);
-				}
+                    if (page === currentPage) {
 
-				showPage(1);
+                        pageItem.innerHTML =
+                            '<span class="page active">' +
+                            page +
+                            '</span>';
 
-			});
-		</script>
+                    } else {
 
-		<!-- Load Shared Sidebar Menu -->
-		<script>
-			fetch('{{ "/menu_sidebar.html" | relative_url }}')
-				.then(response => {
-					if (!response.ok) {
-						throw new Error('Could not load menu_sidebar.html');
-					}
-					return response.text();
-				})
-				.then(data => {
-					document.getElementById('sidebar-menu').innerHTML = data;
+                        pageItem.innerHTML =
+                            '<a href="#" class="page">' +
+                            page +
+                            '</a>';
 
-					$('#menu .opener').each(function() {
-						var $this = $(this);
 
-						$this.on('click', function(event) {
-							event.preventDefault();
-							event.stopPropagation();
+                        pageItem
+                            .querySelector("a")
+                            .addEventListener(
+                                "click",
+                                function (event) {
 
-							var $parent = $this.parent();
+                                    event.preventDefault();
 
-							$parent
-								.siblings()
-								.children('.opener')
-								.removeClass('active');
+                                    showPage(page);
 
-							$this.toggleClass('active');
-						});
-					});
-				})
-				.catch(error => {
-					console.error('Error loading sidebar:', error);
-				});
-		</script>
+                                }
+                            );
 
-	</body>
+                    }
+
+
+                    pagination.appendChild(pageItem);
+
+                }
+
+
+                /* Next */
+
+                const next =
+                    document.createElement("li");
+
+
+                if (currentPage === totalPages) {
+
+                    next.innerHTML =
+                        '<span class="button disabled">Next</span>';
+
+                } else {
+
+                    next.innerHTML =
+                        '<a href="#" class="button">Next</a>';
+
+
+                    next
+                        .querySelector("a")
+                        .addEventListener(
+                            "click",
+                            function (event) {
+
+                                event.preventDefault();
+
+                                showPage(
+                                    currentPage + 1
+                                );
+
+                            }
+                        );
+
+                }
+
+
+                pagination.appendChild(next);
+
+            }
+
+
+            /* Start on page 1 */
+
+            showPage(1);
+
+        });
+    </script>
+
+
+    <!-- Load Shared Sidebar -->
+    <script>
+        fetch('{{ "/menu_sidebar.html" | relative_url }}')
+            .then(response => {
+
+                if (!response.ok) {
+                    throw new Error(
+                        'Could not load menu_sidebar.html'
+                    );
+                }
+
+                return response.text();
+
+            })
+            .then(data => {
+
+                document.getElementById(
+                    'sidebar-menu'
+                ).innerHTML = data;
+
+
+                /* Activate sidebar dropdowns */
+
+                $('#menu .opener').each(function() {
+
+                    var $this = $(this);
+
+                    $this.on('click', function(event) {
+
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        var $parent =
+                            $this.parent();
+
+                        $parent
+                            .siblings()
+                            .children('.opener')
+                            .removeClass('active');
+
+                        $this.toggleClass('active');
+
+                    });
+
+                });
+
+            })
+            .catch(error => {
+
+                console.error(
+                    'Error loading sidebar:',
+                    error
+                );
+
+            });
+    </script>
+
+</body>
 </html>
