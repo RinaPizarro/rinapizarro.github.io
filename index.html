@@ -4,7 +4,7 @@
 	<title>Analyst Studios</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
 <body class="is-preload">
@@ -17,7 +17,7 @@
 
 				<!-- Header -->
 				<header id="header">
-					<a href="{{ '/' | relative_url }}" class="logo">
+					<a href="index.html" class="logo">
 						<strong>Analyst Studios</strong>
 					</a>
 				</header>
@@ -40,7 +40,7 @@
 					</div>
 
 					<span class="image object">
-						<img src="{{ '/images/pic10.jpg' | relative_url }}" alt="Analyst Studios" />
+						<img src="images/pic10.jpg" alt="Analyst Studios" />
 					</span>
 				</section>
 
@@ -114,10 +114,7 @@
 
 								{% if post.image %}
 								<a href="{{ post.url | relative_url }}" class="image">
-									<img
-										src="{{ post.image | relative_url }}"
-										alt="{{ post.title }}"
-									/>
+									<img src="{{ post.image | relative_url }}" alt="{{ post.title }}" />
 								</a>
 								{% endif %}
 
@@ -127,17 +124,13 @@
 								<p>{{ post.description }}</p>
 								{% else %}
 								<p>
-									Explore this project to learn more about
-									the analysis, tools, and insights.
+									{{ post.excerpt | strip_html | truncate: 150 }}
 								</p>
 								{% endif %}
 
 								<ul class="actions">
 									<li>
-										<a
-											href="{{ post.url | relative_url }}"
-											class="button"
-										>
+										<a href="{{ post.url | relative_url }}" class="button">
 											View Project
 										</a>
 									</li>
@@ -158,12 +151,11 @@
 
 					<ul class="actions">
 						<li>
-							<a href="{{ '/blog.html' | relative_url }}" class="button">
+							<a href="blog.html" class="button">
 								View All Articles
 							</a>
 						</li>
 					</ul>
-
 				</section>
 
 			</div>
@@ -198,7 +190,7 @@
 
 						<article>
 							<a href="#" class="image">
-								<img src="{{ '/images/pic07.jpg' | relative_url }}" alt="" />
+								<img src="images/pic07.jpg" alt="" />
 							</a>
 							<p>
 								Data analytics, visualization, and reporting projects.
@@ -207,7 +199,7 @@
 
 						<article>
 							<a href="#" class="image">
-								<img src="{{ '/images/pic08.jpg' | relative_url }}" alt="" />
+								<img src="images/pic08.jpg" alt="" />
 							</a>
 							<p>
 								Explore dashboards and data-driven insights.
@@ -216,7 +208,7 @@
 
 						<article>
 							<a href="#" class="image">
-								<img src="{{ '/images/pic09.jpg' | relative_url }}" alt="" />
+								<img src="images/pic09.jpg" alt="" />
 							</a>
 							<p>
 								View projects and learn more about my experience.
@@ -227,7 +219,7 @@
 
 					<ul class="actions">
 						<li>
-							<a href="{{ '/blog.html' | relative_url }}" class="button">
+							<a href="blog.html" class="button">
 								More
 							</a>
 						</li>
@@ -277,15 +269,15 @@
 	</div>
 
 	<!-- Scripts -->
-	<script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
-	<script src="{{ '/assets/js/browser.min.js' | relative_url }}"></script>
-	<script src="{{ '/assets/js/breakpoints.min.js' | relative_url }}"></script>
-	<script src="{{ '/assets/js/util.js' | relative_url }}"></script>
-	<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
 	<!-- Load Shared Sidebar Menu -->
 	<script>
-		fetch('{{ "/menu_sidebar.html" | relative_url }}')
+		fetch('menu_sidebar.html')
 			.then(response => {
 				if (!response.ok) {
 					throw new Error('Could not load menu_sidebar.html');
