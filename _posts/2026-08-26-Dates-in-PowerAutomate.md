@@ -105,3 +105,32 @@ This grabs the currentdate in UTC and converts to Eastern Standard Time (EST).
 
 ### Section 3 Search Query using Dates
 If you are trying to retrieve emails from a certain date (or from range of dates), you will need to mnow how to format dates in tha searchquery. 
+
+### Section 4 Recurrence Trigger
+
+### Section 5 Buisness Hours
+Sometimes you need your flow to run only during certain buisness hours. Lets say your company has buisness hours Monday-Friday 8am-5pm EST. You may want your cloud flow to run only during this hours.
+
+#### Section 5.1 Condition action
+Beginning with a condition action. You need to answer two questions
+
+1. Is today a weekday?
+2. Is the current hour within buisness hours?
+
+Let's begin by grabbing today'a date 
+
+`dayOfWeek(convertTimeZone(utcNow(), 'UTC', 'Eastern Time Zone'))`
+
+Now let's grab the current hour
+
+'int)formatDateTime(convertTimeZone(utcNow(), 'UTC', 'Eastern Time Zone), 'H'))`
+
+We have today's date as a number and the current hour. Now we will see if the number is a weekday and current hour is within buisness hours.
+
+### Section 5.2 Terminate Action for Condition
+If you completed section 5.1, then you may have a false branch that does nothing. It may be helpful to add an error message for backtracking. 
+
+Add a **terminate** action. 
+
+### Section 5.3 Handling Holidays 
+
