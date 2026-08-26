@@ -77,3 +77,12 @@ Next, take that array of emails and pass it into the Apply to Each loop. Inside 
 * **'Apply_to_each'** tells Power Automate the name of the loop you're referring to.
 * **?** is the safe navigation operator. It tells Power Automate to continue searching if the value exists. If it does not, don't cause an error.
 * **['receivedDateTime']** is the specific property from the current item. 
+
+#### Section 3.1 Do Until
+This loop continues executing until the final condition is met. When using a Do Until, you will need some kind of way to increment a value. For example, you may continue searching for an array until you find a certain value, or you will need to increment the date in your search query until you search the end of the year. 
+
+`Condition: length of array
+Operator: is equal to
+Value: 0`
+
+
