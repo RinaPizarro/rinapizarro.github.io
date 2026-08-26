@@ -334,6 +334,17 @@
 
                 });
 
+
+                /*
+                 * The sidebar is loaded dynamically.
+                 * Tell Editorial to recalculate its height
+                 * after the menu has been inserted.
+                 */
+
+                $(window).trigger(
+                    'resize.sidebar-lock'
+                );
+
             })
             .catch(error => {
 
