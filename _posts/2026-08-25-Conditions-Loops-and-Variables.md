@@ -52,3 +52,28 @@ You will also have the option to chose *and* or *or* for your conditional staten
 
 The final part will be *True* and *False* branches that come aftee your condition. If your input value evaluates to true in your conditional statement(s), then your *True* branch will run. Otherwise, your *False* branch will run.
 
+If you're evaluating strings, you can use *Contains*. Similarily, you can use *Contains* to evaluate if an array contains a value. 
+
+
+### Section 3 Loops
+
+Section 3.1 Introduction to Loops
+Loops are an excellent way to repeat the same action(s) with implenting the actions multiple times. There are two many loops in Power Automate:
+
+1. Apply to Each
+2. Do Until
+
+#### Section 3.2 Apply to Each
+**Apply to Each** is excellent for evaluating a series of actions against an array of items. For example, if you have a list of items in SharePoint List, using Apply to Each would apply the same series of steps to each item in the list.
+
+##### Section 3.2.1 Example of accessing properties with Get Emails from Outlook
+Let's say you are trying to pull a bunch of emails from Outlook with the action named **Get Emails**. You want to look at the time each email was received. When you run the Get Emails, the output will be an array of emails. 
+
+Next, take that array of emails and pass it into the Apply to Each loop. Inside your loop, you can then access the various items and their properties. 
+
+`items('Apply_to_each')?['receivedDateTime']`
+
+* **items()** is a function that grabs the current item in the loop.
+* **'Apply_to_each'** tells Power Automate the name of the loop you're referring to.
+* **?** is the safe navigation operator. It tells Power Automate to continue searching if the value exists. If it does not, don't cause an error.
+* **['receivedDateTime']** is the specific property from the current item. 
