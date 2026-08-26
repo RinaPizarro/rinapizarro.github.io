@@ -56,54 +56,6 @@
 	</section>
 	<p></p>
 
-	<!-- Featured -->
-	<section class="sidebar-featured">
-		<header class="major">
-			<h2>Featured</h2>
-		</header>
-
-		<div class="mini-posts">
-
-			{% for post in site.posts limit:3 %}
-
-			<article>
-
-				{% if post.image %}
-				<a href="{{ post.url | relative_url }}" class="image">
-					<img
-						src="{{ post.image | relative_url }}"
-						alt="{{ post.title }}"
-					/>
-				</a>
-				{% endif %}
-
-				<p>
-					<a href="{{ post.url | relative_url }}">
-						<strong>{{ post.title }}</strong>
-					</a>
-				</p>
-
-				{% if post.description %}
-				<p>
-					{{ post.description }}
-				</p>
-				{% endif %}
-
-			</article>
-
-			{% endfor %}
-
-		</div>
-
-		<ul class="actions">
-			<li>
-				<a href="{{ '/blog.html' | relative_url }}" class="button">
-					More
-				</a>
-			</li>
-		</ul>
-	</section>
-
 	<!-- Contact -->
 	<section>
 		<header class="major">
