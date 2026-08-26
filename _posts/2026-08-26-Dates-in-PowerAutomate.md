@@ -127,10 +127,15 @@ Now let's grab the current hour
 
 We have today's date as a number and the current hour. Now we will see if the number is a weekday and current hour is within buisness hours.
 
-### Section 5.2 Terminate Action for Condition
+#### Section 5.2 Terminate Action for Condition
 If you completed section 5.1, then you may have a false branch that does nothing. It may be helpful to add an error message for backtracking. 
 
 Add a **terminate** action. 
 
-### Section 5.3 Handling Holidays 
+#### Section 5.3 Handling Holidays 
+You will need a data source. This could be a Sharepoint List or Excel file. Let's take a SharePoint List as an example. Ensure there is a date column.
+
+Add **Get Items** action
+
+### Section 6 Concurrency Runs
 
