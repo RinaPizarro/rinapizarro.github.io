@@ -85,4 +85,13 @@ This loop continues executing until the final condition is met. When using a Do 
 Operator: is equal to
 Value: 0`
 
+#### Section 4 Best Practices
+
+Now that we understand conditions, loops, and variables, let's understand some ground rules for using these functionalities.
+
+* Always initialize a variable before beginning a loop or condition. Your variable can be initializex with *null* value if necessary. In your condition or loop, you can then increment the variable or set the variable to a new value. 
+
+* Do Until can be stuck in an infinite loop if the value never evaluates to true. Therefore, always ensure you are updating your variables in some way that reaches your end condition.
+
+* Ensure your process runs as efficiently as possible. Runtime performance can decrease depending on the complexity of your process.  
 
