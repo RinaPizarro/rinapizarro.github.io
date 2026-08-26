@@ -13,8 +13,7 @@ Conditions, loops, and variables serve as building blocks for creating automated
 
 ### Section 1 Variables
 
-### Section 1.1 Introduction to Variables
-
+#### Section 1.1 Introduction to Variables
 Variables store information that can be used later. For example, you may have a variable called *MyAge* that is equal to the integer 16.
 
 `MyAge = 16`
@@ -27,3 +26,29 @@ In this example, MyAge is the variable name, and 16 is the value of the variable
 * **Boolean Variables** store logic such as true and false
 * **Array Variables** store a list of items.
 * **Object Variables** store complex data structures with multiple properties.
+
+#### Section 1.2 Initialize a Variable
+To initialize a variable, search for the action named **Initialize Variable**. Let's configure out variable with the following fields as an example:
+
+`Variable name: SalaryCount
+Type: Integer
+Value: 0`
+
+#### Section 1.3 Updating a Variable
+Let's say you initialized a variable in the beginning of your flow. Later on, we decide to update the variable to a different value. To update a variable's value, search for the action named **Set Variable** for complete replacement or **Increment Variable** for numeric additions.
+
+### Section 2 Conditions
+
+#### Section 2.1 Introduction to Conditions
+Let's say you're building a flow that show run only during certain buisness hours. Creating a condition would be excelt to check the day of the week and current hour. 
+
+Conditions have three main components:
+
+1. **Left Side**: the a value to evaluate
+2. **Operator**: decide how you want to compare the value
+3. **Right Side**: the value to compare against
+
+You will also have the option to chose *and* or *or* for your conditional statents if you have multiple statements. If you only have one statement, you can keep the option as *and*. 
+
+The final part will be *True* and *False* branches that come aftee your condition. If your input value evaluates to true in your conditional statement(s), then your *True* branch will run. Otherwise, your *False* branch will run.
+
