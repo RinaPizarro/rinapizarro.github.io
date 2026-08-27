@@ -56,6 +56,8 @@ If the numerical value doesn't fit your formatting needs, you may also specify f
 - *'yyyy-mm-dd'*
 - *'HH:mm:ss'*
 
+![](/assets/images/power_automate_formatdatetime.png){:height="300px"}
+
 #### Section 1.3 convertTimeZone()
 
 This where we take the UTC datetime and convert to our desired timezone.
