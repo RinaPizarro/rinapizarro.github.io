@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Nested Table Columns
 categories: powerquery
 description: "Nested Table Columns "
