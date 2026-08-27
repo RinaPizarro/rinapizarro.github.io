@@ -40,9 +40,7 @@ Let's say you initialized a variable in the beginning of your flow. Later on, we
 
 
 
-![image.png](/assets/images/image-1.png)
-
-{:height="300px"}
+![image.png](/assets/images/image-1.png){:height="300px"}
 
 ### Section 2 Conditions
 
@@ -56,17 +54,13 @@ Conditions have three main components:
 2. **Operator**: decide how you want to compare the value
 3. **Right Side**: the value to compare against
 
-![image.png](/assets/images/image-2.png)
-
-{:height="300px"}
+![image.png](/assets/images/image-2.png){:height="300px"}
 
 You will also have the option to chose *and* or *or* for your conditional statents if you have multiple statements. If you only have one statement, you can keep the option as *and*. 
 
 The final part will be *True* and *False* branches that come aftee your condition. If your input value evaluates to true in your conditional statement(s), then your *True* branch will run. Otherwise, your *False* branch will run.
 
-![image.png](/assets/images/image-4.png)
-
-{:height="300px"}
+![image.png](/assets/images/image-4.png){:height="300px"}
 
 If you're evaluating strings, you can use *Contains*. Similarily, you can use *Contains* to evaluate if an array contains a value. 
 
