@@ -32,15 +32,14 @@ In this example, MyAge is the variable name, and 16 is the value of the variable
 
 To initialize a variable, search for the action named **Initialize Variable**. Let's configure out variable with the following fields as an example:
 
-![](/assets/images/image.png){:height="300px"}
+![](/assets/images/power_automate_set_variable.png){:height="300px"}
+
 
 #### Section 1.3 Updating a Variable
 
 Let's say you initialized a variable in the beginning of your flow. Later on, we decide to update the variable to a different value. To update a variable's value, search for the action named **Set Variable** for complete replacement or **Increment Variable** for numeric additions.
 
-
-
-![image.png](/assets/images/image-1.png){:height="300px"}
+![](/assets/images/power_automate_increment_variable.png){:height="300px"}
 
 ### Section 2 Conditions
 
@@ -54,13 +53,13 @@ Conditions have three main components:
 2. **Operator**: decide how you want to compare the value
 3. **Right Side**: the value to compare against
 
-![image.png](/assets/images/image-2.png){:height="300px"}
+![](/assets/images/power_automate_condition.png){:height="300px"}
 
 You will also have the option to chose *and* or *or* for your conditional statents if you have multiple statements. If you only have one statement, you can keep the option as *and*. 
 
 The final part will be *True* and *False* branches that come aftee your condition. If your input value evaluates to true in your conditional statement(s), then your *True* branch will run. Otherwise, your *False* branch will run.
 
-![image.png](/assets/images/image-4.png){:height="300px"}
+
 
 If you're evaluating strings, you can use *Contains*. Similarily, you can use *Contains* to evaluate if an array contains a value. 
 
