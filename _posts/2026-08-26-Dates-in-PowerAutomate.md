@@ -23,7 +23,7 @@ This section will cover the main functions you would need to begin working and u
 
 utcNow() returns the current date and time in UTC. 
 
-![](/assets/images/power_automate_utcnow.png){:height="300px"}
+![](/assets/images/power_automate_utcnow.png){:height="200px"}
 
 - **2026-08-27** is the date in short date format
 - **T** is the seperator between the date (left side) and the time (right side)
@@ -56,7 +56,7 @@ If the numerical value doesn't fit your formatting needs, you may also specify f
 - *'yyyy-mm-dd'*
 - *'HH:mm:ss'*
 
-![](/assets/images/power_automate_formatdatetime.png){:height="300px"}
+![](/assets/images/power_automate_formatdatetime.png){:height="200px"}
 
 #### Section 1.3 convertTimeZone()
 
