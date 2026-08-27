@@ -9,6 +9,8 @@ Learning M language is incredibly valuable for when Power Query's GUI editor pos
 
 ### Section 1 Structure
 
+#### Section 1.1 Let and In Block
+
 ```
 let
     [insert steps]
@@ -21,8 +23,11 @@ in
 
 Inside the *Let* block, we define a series of steps. Each steps is defined by a name and followed by various functions and transormations. When you open the advanced edtitor, you'll typically see something like this:
 
+![](/assets/images/m_language_syntax_example_1.png){:height="300px"}
 
+- We beginning our *let* block by defining a *Source*. Here, wer are using a local .csv file for Uber ride bookings. 
+- Our next step named *#"Promoted Headers"* referenced our previous step. The next step named *#"Changed Type"* referenced our previous step. Notice how its a pipeline of steps, each one referencing the previous step.
 
-&nbsp;
+Section 1.2 Naming Conventions for Steps
 
-&nbsp;
+As mentioned in *Section 1.1 Let and In Block*, the let block contains a serious of steps. All of these steps can be viewed in the righthand side of your query edtiro in the section labeled *Applied Steps*.
