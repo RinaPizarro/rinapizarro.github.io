@@ -32,7 +32,7 @@ In this example, MyAge is the variable name, and 16 is the value of the variable
 
 To initialize a variable, search for the action named **Initialize Variable**. Let's configure out variable with the following fields as an example:
 
-![](/assets/images/image.png){:height="100px"}
+![](/assets/images/image.png){:height="300px"}
 
 #### Section 1.3 Updating a Variable
 
