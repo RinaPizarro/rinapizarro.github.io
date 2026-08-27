@@ -1,6 +1,8 @@
 media:
-  input: assets/images
-  output: /assets/images
+  - name: images
+    label: Images
+    input: assets/images
+    output: /assets/images
 
 content:
   - name: posts
@@ -30,6 +32,6 @@ content:
         label: Content
         type: rich-text
         options:
-          media: media
+          media: images
           path: posts
           rename: true
