@@ -31,3 +31,13 @@ Inside the *Let* block, we define a series of steps. Each steps is defined by a 
 Section 1.2 Naming Conventions for Steps
 
 As mentioned in *Section 1.1 Let and In Block*, the let block contains a serious of steps. All of these steps can be viewed in the righthand side of your query edtiro in the section labeled *Applied Steps*.
+
+![](/assets/images/m_language_applied_steps.png){:height="150px"}
+
+These are all of our steps from the advanced editor. When you are creating your steps in the advanced editor, please note the following:
+
+- If your step name has spaces, use *#"Insert Name Here"* 
+- If your step name does not have spaces, you can use *InsertStepName* or *insert_step_name*
+
+### Section 2 Data Types
+
