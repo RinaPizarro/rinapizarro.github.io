@@ -31,3 +31,5 @@ content:
         type: rich-text
         options:
           media: media
+          path: posts
+          rename: true
