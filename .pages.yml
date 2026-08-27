@@ -1,9 +1,14 @@
+media:
+  input: assets/images
+  output: /assets/images
+
 content:
   - name: posts
     label: Posts
     type: collection
     path: _posts
     format: yaml-frontmatter
+
     fields:
       - name: layout
         label: Layout
@@ -24,3 +29,7 @@ content:
       - name: body
         label: Content
         type: rich-text
+        options:
+          media: media
+          path: posts
+          rename: true
