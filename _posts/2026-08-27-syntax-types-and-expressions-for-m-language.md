@@ -110,5 +110,14 @@ Section 3.3 each
 ![](/assets/images/m_language_each_function_example_1.png){:height="100px"}
 
 - This example translated to *'"or each row in SalesData table, take the Sales columns and multiple the current value by 0.1"*
-- 
+
+Section 3.4 Error Handling
+
+Sometimes you may want to have some kind of way to handle errors so that the rest of your query does not fail. 
+
+```
+Try ... Otherwise ...
+```
+
+![](/assets/images/m_language_error_handling_example_1.png){:height="100px"}
 
