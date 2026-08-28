@@ -109,3 +109,6 @@ Section 3.3 each
 
 ![](/assets/images/m_language_each_function_example_1.png){:height="100px"}
 
+- This example translated to *'"or each row in SalesData table, take the Sales columns and multiple the current value by 0.1"*
+- 
+
