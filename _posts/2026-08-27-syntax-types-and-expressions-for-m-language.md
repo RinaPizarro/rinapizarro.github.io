@@ -32,7 +32,7 @@ Section 1.2 Naming Conventions for Steps
 
 As mentioned in *Section 1.1 Let and In Block*, the let block contains a serious of steps. All of these steps can be viewed in the righthand side of your query edtiro in the section labeled *Applied Steps*.
 
-![](/assets/images/m_language_applied_steps.png){:height="150px"}
+![](/assets/images/m_language_applied_steps.png){:height="500px"}
 
 These are all of our steps from the advanced editor. When you are creating your steps in the advanced editor, please note the following:
 
@@ -74,11 +74,11 @@ Section 2.2 Complex Data Types
 Table.FromRows(rows as list, optional columns as any) as table
 ```
 
-![](/assets/images/m_language_create_table_type.png){:height="300px"}
+![](/assets/images/m_language_create_table_type.png){:height="150px"}
 
 - *Functions* can be assigned to variables
 
-![](/assets/images/m_language_create_function_type.png){:height="300px"}
+![](/assets/images/m_language_create_function_type.png){:height="150px"}
 
 ### Section 3 Expressions
 
@@ -121,11 +121,11 @@ Sometimes you may want to have some kind of way to handle errors so that the res
 Try ... Otherwise ...
 ```
 
-![](/assets/images/m_language_error_handling_example_1.png){:height="300px"}
+![](/assets/images/m_language_error_handling_example_1.png){:height="150px"}
 
 Section 3.5 Functions
 
 Functions may have one or more parameters. You can always check Microsoft's documentation to verify the parameters. Power Query also shows a quick view of the parameters (with expected data types) as you edit in the advanced edtitor.
 
-![](/assets/images/m_language_function_parameters.png){:height="300px"}
+![](/assets/images/m_language_function_parameters.png){:height="150px"}
 
