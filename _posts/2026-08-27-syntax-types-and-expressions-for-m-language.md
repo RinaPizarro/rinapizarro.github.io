@@ -121,11 +121,11 @@ Sometimes you may want to have some kind of way to handle errors so that the res
 Try ... Otherwise ...
 ```
 
-![](/assets/images/m_language_error_handling_example_1.png){:height="50px"}
+![](/assets/images/m_language_error_handling_example_1.png){:height="80x"}
 
 Section 3.5 Functions
 
 Functions may have one or more parameters. You can always check Microsoft's documentation to verify the parameters. Power Query also shows a quick view of the parameters (with expected data types) as you edit in the advanced edtitor.
 
-![](/assets/images/m_language_function_parameters.png){:height="50px"}
+![](/assets/images/m_language_function_parameters.png){:height="80px"}
 
