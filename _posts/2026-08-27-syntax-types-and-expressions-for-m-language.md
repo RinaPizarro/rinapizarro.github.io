@@ -23,7 +23,7 @@ in
 
 Inside the *Let* block, we define a series of steps. Each steps is defined by a name and followed by various functions and transormations. When you open the advanced edtitor, you'll typically see something like this:
 
-![](/assets/images/m_language_syntax_example_1.png){:height="300px"}
+![](/assets/images/m_language_syntax_example_1.png){:height="250px"}
 
 - We beginning our *let* block by defining a *Source*. Here, wer are using a local .csv file for Uber ride bookings. 
 - Our next step named *#"Promoted Headers"* referenced our previous step. The next step named *#"Changed Type"* referenced our previous step. Notice how its a pipeline of steps, each one referencing the previous step.
@@ -121,11 +121,11 @@ Sometimes you may want to have some kind of way to handle errors so that the res
 Try ... Otherwise ...
 ```
 
-![](/assets/images/m_language_error_handling_example_1.png){:height="150px"}
+![](/assets/images/m_language_error_handling_example_1.png){:height="50px"}
 
 Section 3.5 Functions
 
 Functions may have one or more parameters. You can always check Microsoft's documentation to verify the parameters. Power Query also shows a quick view of the parameters (with expected data types) as you edit in the advanced edtitor.
 
-![](/assets/images/m_language_function_parameters.png){:height="150px"}
+![](/assets/images/m_language_function_parameters.png){:height="50px"}
 
