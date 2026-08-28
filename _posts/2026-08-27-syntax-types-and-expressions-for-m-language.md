@@ -66,7 +66,7 @@ Section 2.2 Complex Data Types
     - Name, Age, and IsMarried are considered fields
     - To access a value such as Name, you would use the syntax *RecordName[Name]*
 - *Tables* are a structured collection of rows and columns
-  - The function *Table.FromRows()* can be used to create your own custom table. 
+  - The function *Table.FromRows()* can be used to create your own custom table.
 
 ```
 Table.FromRows(rows as list, optional columns as any) as table
@@ -80,4 +80,32 @@ Table.FromRows(rows as list, optional columns as any) as table
 
 ### Section 3 Expressions
 
-Section 3.1 Comparison Expressions
+Section 3.1 Comparisons
+
+- *and* and *or* are conditional words.
+- *<, < <=, >=,* and *<>* are used for comparisons
+
+Section 3.2 Conditionals
+
+```
+if 
+    [first statement]
+then
+    ...
+else if 
+    [second statement]
+then 
+    ...
+else
+    [statement]
+```
+
+Section 3.3 each
+
+*Each* is a keyword used for creating inline functions. This is extremely useful for referncing each row in a column or each item in a list. 
+
+- *(_) =>* represent the current item
+  - You can simply use _ as well to reprent the current item.
+
+![](/assets/images/m_language_each_function_example_1.png){:height="100px"}
+
