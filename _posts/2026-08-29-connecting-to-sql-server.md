@@ -20,3 +20,18 @@ With a file stored in SharePoint, Power Query has to *locate and read* the conte
 There’s also the issue of maintaining the data source. Your organization may store the same data in multiple places—for example, a transactions table in a SQL database alongside Excel files containing the same sales transactions. If your Power Query source is a SharePoint folder, someone may need to manually upload or drop the daily transaction files into that folder. That quickly becomes tedious and exhausting.
 
 A SQL database eliminates much of that manual work. Once the connection and query are set up, the process can be largely automated, allowing you to spend less time managing files and more time working with the data.
+
+
+
+### Section 2 Setting up the Source in Advanced Editor
+
+I'm going to use the advanced editor for this. 
+
+```
+let
+     Source = SQL.Database('serverName', 'databaseName')
+     MyQuery = Value.NativeQuery(Source, "Write Your Query Here")
+in
+    MyQuery
+```
+
