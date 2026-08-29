@@ -36,7 +36,7 @@ Table.SelectRows(table as table, condition as function)
 ```
 
 - The *table* will the the name of our previous step which was *Source*.
-- *condition* will contain the properties we need. For our condition, we want to see if the file path contains our specific folder. For that, we will use the function *Text.Contains()*. 
+- *condition* will contain the properties we need. For our condition, we want to see if the file path contains our specific folder. For that, we will use the function *Text.Contains()*.
 
 ```
 Text.Contains(
@@ -131,6 +131,8 @@ Excel.Workbook(
 ```
 
 - *Workbook* will be the name of our previous step.
+- *useHeaders* can be *True* if we want to use the headers or *False* if we don't want to use the headers. By default, this is *False*.
+- *delayTypes* can be True if we want Power Query to hold on on assigning data types to each column, or *False* if we want Power Query to go ahead and determine the data types of each column. By default, this is *False.*
 
 ```
 let
