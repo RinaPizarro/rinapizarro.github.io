@@ -6,7 +6,7 @@ description: This guide will explain how to use web pages and APIs as a source.
 ---
 Our target data not always be in something as nicely organized as a SQL database or Excel file. Pulling data from a web page requires authentication that will be explained in this guide.
 
-### Source 1 Sources
+### Source 1 Functions
 
 Section 1.1 Web.Contents()
 
@@ -26,8 +26,9 @@ Web.Page(html as any)
 
 This function is great for scraping HTML elements. It processes a complete HTML documents into table structures.
 
-### Section 2 Building API connection
+Section 1.3 Json.Document()
 
+```
+Json.Document(jsonText as any, optional encoding as nullable number)
+```
 
-
-&nbsp;
