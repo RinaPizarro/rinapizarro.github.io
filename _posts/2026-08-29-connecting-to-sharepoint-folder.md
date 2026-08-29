@@ -18,7 +18,7 @@ SharePoint.Files(url as text, optional options as nullable record)
 ```
 
 - The *url* must the root URL of the SharePoint website, not the direct URL to the target folder. Therefore, if our direct URL to the target folder is something like *https://sharepoint.com/companyname/documents/weeklyreports/* then our root URL would be *https://sharepoint.com/companyname*
-- At the tome of writing this article, *options* is used to specify the SharePoint API version to use for the site. By default, this is API Version 14. However, you may specify API Version 15. 
+- At the time of writing this article, *options* is used to specify the SharePoint API version to use for the site. By default, this is API Version 14. However, you may specify API Version 15. 
 
 Thus, we get the first step in our query:
 
