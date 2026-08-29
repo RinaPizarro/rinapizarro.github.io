@@ -89,3 +89,13 @@ MyQuery = Value.NativeQuery(
 Here is an example of using a query in the parameter. It is essentially no different than writing a query directly in the database.
 
 *Your query in the database may use USE DATABASE_NAME GO at the top to specify the database. Since our Source step specifies the database name, this can be eliminated in our native query. Otherwise, if we try to include USE...GO... then Power Query is going to complain and throw an error* 
+
+### Section 3 Privacy Levels
+
+You may need to specify a privacy level. Here are the three privacy levels:
+
+1. **Private**: No data from this source can be shared with other sources
+2. **Organizational**: Data can be shared with sources at the same privacy level
+3. **Public**: Data can be shared with any source
+
+Privacy Levels determine how the data is securely transferred, combined, and stores. If you're using Power Query for organizational purposes, you'll typically select organizational.
