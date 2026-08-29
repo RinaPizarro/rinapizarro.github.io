@@ -65,7 +65,21 @@ After */mailFolders*, we want to use the *id* of the folder in our URL. However,
 https://graph.microsoft.com/v1.0/me/mailFolders/AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MAAuAAAAAAB8dGH_gOEhS58qBHWH-2K3AQCMJW4mPim-Q7mgBNUhcMAjAAAAAAEtAAA=/messages
 ```
 
-Section 2.3 
+Section 2.3 Outlook Categories
+
+Now that we got the messages, we may want to look at other properities of our message such as the category. We can use a URL such as
+
+```
+https://graph.microsoft.com/v1.0/me/mailFolders/AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MAAuAAAAAAB8dGH_gOEhS58qBHWH-2K3AQCMJW4mPim-Q7mgBNUhcMAjAAAAAAEMAAA=/messages/AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MABGAAAAAAB8dGH_gOEhS58qBHWH-2K3BwCMJW4mPim-Q7mgBNUhcMAjAAAAAAEMAACMJW4mPim-Q7mgBNUhcMAjAAAAAE3XAAA=/categories
+```
+
+Here is a breakdown of this URL:
+
+- **https://graph.microsoft.com/v1.0/me/mailFolders** is our URL 
+- **AMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MAAuAAAAAAB8dGH_gOEhS58qBHWH-2K3AQCMJW4mPim-Q7mgBNUhcMAjAAAAAAEMAAA=** is the id of the inbox folder
+- **messages** retrieves the emails in the inbox folder
+- **AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MABGAAAAAAB8dGH_gOEhS58qBHWH-2K3BwCMJW4mPim-Q7mgBNUhcMAjAAAAAAEMAACMJW4mPim-Q7mgBNUhcMAjAAAAAE3XAAA=** is the id of one of the emails in my inbox
+- **categories** gives me an array of categories associated with the email.
 
 ### Section 3 Query Parameters
 
