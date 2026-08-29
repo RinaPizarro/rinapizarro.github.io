@@ -66,6 +66,54 @@ in
 
 ```
 
+*Reports* will be the folder that contains our excel files. 
 
+Now that we have our specific folder, we really just need the latest file in that folder. To do so, we are going to use the *Table.Sort()* function
 
-&nbsp;
+```
+Table.Sort(table as table, comparisonCriteria as any)
+```
+
+- As usual, the *table* will be the previous step in our query.
+- *comparisonCriteria* will be a list thats contains our column name as text, and either *Order.descending* or *Order.ascending.*
+
+```
+let
+     Source = SharePoint.Files("https://sharepoint.com/analyststudios.com", [ApiVersion = 15]),
+     FilteredRows =  Table.SelectRows(
+        Source,
+        each Text.Contains(
+            [Folder Path],
+            "/Shared Documents/Reports/"
+        )
+    ),
+      SortedFiles = Table.Sort(
+        FilteredFiles,
+        {{"Date modified", Order.Descending}}
+    )
+in
+     SortedFiles
+```
+
+Now that we have our excel files within our folder sorted by descending date, we only care about the first file. This, we will grab the first file in the example below:
+
+```
+let
+     Source = SharePoint.Files("https://sharepoint.com/analyststudios.com", [ApiVersion = 15]),
+     FilteredRows =  Table.SelectRows(
+        Source,
+        each Text.Contains(
+            [Folder Path],
+            "/Shared Documents/Reports/"
+        )
+    ),
+      SortedFiles = Table.Sort(
+        FilteredFiles,
+        {{"Date modified", Order.Descending}}
+    ),
+     TopFile = SortedFiles{0}[Content]
+in
+     TopFile
+```
+
+Now we have only the latest file! 
