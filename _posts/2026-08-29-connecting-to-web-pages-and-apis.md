@@ -36,7 +36,7 @@ When you use REST APIs for retrieve data, your output will be in the form of JSO
 
 Section 1.4 Example of Web.Contents() and json.documents()
 
-
+The best way to understand these functions is to give an example. Therefore, let's use 
 
 ## Section 2 
 
