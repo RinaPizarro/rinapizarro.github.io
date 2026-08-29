@@ -161,5 +161,15 @@ At the end of our query that retrieves all messages from our Inbox, I added *$* 
 
 Depending on where you are in the organization and what actions you attempting to achieve, certain URLs needs certain permissions. If you are trying to access your business inbox using your personal credentials rather than your organizational credentials, Graph Explorer is going to deny your access. There are various permissions in Graph Explorer which are all [outlined here](https://learn.microsoft.com/en-us/graph/permissions-reference). While there may be several permissions, let's go over the common ones for Outlook.
 
-Section 4.1 Accessing user authenticated data 
+Section 4.1 Permissions for User Authenticated Data 
+
+- Mail.Read
+- Mail.ReadBasic
+- Mail.ReadWrite
+
+Section 4.2 Accessing Organizational User Data
+
+- Mail.Read.Shared
+- Mail.ReadBasic.Shared
+- Mail.ReadWrite.Shared
 
