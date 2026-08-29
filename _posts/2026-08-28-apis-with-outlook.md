@@ -157,3 +157,5 @@ At the end of our query that retrieves all messages from our Inbox, I added *$* 
 
 ### Section 4 Permissions
 
+![](/assets/images/graph_api_permissions.png){:height="300px"}
+
