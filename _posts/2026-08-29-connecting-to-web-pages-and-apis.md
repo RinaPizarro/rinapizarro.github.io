@@ -33,3 +33,11 @@ Json.Document(jsonText as any, optional encoding as nullable number)
 ```
 
 When you use REST APIs for retrieve data, your output will be in the form of JSON. Thus, the *json.document()* returns the content of the specified JSON text as a record.
+
+## Section 2 API requests
+
+
+
+&nbsp;
+
+&nbsp;
