@@ -28,7 +28,15 @@ https://graph.microsoft.com/v1.0/me
 
 If we run the URL above, we get something similar like this:
 
-![](/assets/images/graph_api_basic_url_example_1.png){:height="300px"}
+
+
+![](/assets/images/graph_api_basic_url_example_1.png)
+
+{:height="300px"}
+
+### Section 2 Retrieving Emails
+
+Section 2.1 mailFolders
 
 Our output ends up being a JSON object that has various keys with values. 
 
@@ -43,5 +51,19 @@ Here is an example of a URL that gets our folders or *mailFolders*. Emails, or *
 - *id* is the identifier for the folder object. 
 - *displayName* is the name of the folder as it appears in Outlook
 - *parentFolderId* is the ID of the folder in which the current folder object resides in
-- *childFolderCount* lets us know the number of subfolders in the current folder object 
+- *childFolderCount* lets us know the number of subfolders in the current folder object
+
+Section 2.2 Messages
+
+Let's say we want to grab the emails from our Inbox.
+
+```
+https://graph.microsoft.com/v1.0/me/mailFolders/AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MAAuAAAAAAB8dGH_gOEhS58qBHWH-2K3AQCMJW4mPim-Q7mgBNUhcMAjAAAAAAEtAAA=
+```
+
+After */mailFolders*, we want to use the *id* of the folder in our URL. However, this URL alone will just give us the folder properties. To access the emails in the folder, we add */messages* to the end of our URL. 
+
+```
+https://graph.microsoft.com/v1.0/me/mailFolders/AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MAAuAAAAAAB8dGH_gOEhS58qBHWH-2K3AQCMJW4mPim-Q7mgBNUhcMAjAAAAAAEtAAA=/messages
+```
 
