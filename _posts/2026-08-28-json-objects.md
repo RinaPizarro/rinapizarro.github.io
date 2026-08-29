@@ -12,3 +12,14 @@ Let's say you are creating a scheduled flow in Power Automate that retrieves the
 
 Section 1.1 Introduction
 
+**JSON** stands for **Javascript Object Notation**. Whereas tables contain rows and columns, JSON objects contain keys and values. Together, they are known as *key value pair*.
+
+```
+{
+  "Field1":"aValue1",
+  "Field2":"aValue2",
+  "Field3":"aValue3"
+}
+```
+
+Values can be strings, integers, arrays, or booleans.
