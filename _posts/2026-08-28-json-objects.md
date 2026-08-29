@@ -22,4 +22,9 @@ Section 1.1 Introduction
 }
 ```
 
-Values can be strings, integers, arrays, or booleans.
+Values can be strings, integers, arrays, or booleans. So if you want to extract the value of a certain key, you can use the following syntax:
+
+```
+variables('ObjectName')?['KeyName']
+```
+
