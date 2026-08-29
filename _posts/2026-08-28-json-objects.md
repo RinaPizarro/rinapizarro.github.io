@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: JSON Objects
 categories: powerautomate
 description: Action outputs in Power Automate will often times returns a JSON
