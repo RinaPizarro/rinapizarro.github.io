@@ -35,3 +35,11 @@ in
     MyQuery
 ```
 
+After a few uses, you'll probably have this memorized. Let's breakdown *SQL.Database* and *Value.NativeQuery.*
+
+Section 2.1 SQL.Database
+
+```
+Sql.Database(server as text, database as text, optional options as nullable record) as table
+```
+
