@@ -87,3 +87,5 @@ MyQuery = Value.NativeQuery(
 ```
 
 Here is an example of using a query in the parameter. It is essentially no different than writing a query directly in the database.
+
+*Your query in the database may use USE DATABASE_NAME GO at the top to specify the database. Since our Source step specifies the database name, this can be eliminated in our native query. Otherwise, if we try to include USE...GO... then Power Query is going to complain and throw an error* 
