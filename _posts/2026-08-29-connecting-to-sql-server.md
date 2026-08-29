@@ -65,3 +65,25 @@ Value.NativeQuery(
 ) as any
 ```
 
+Most of the time you really only need to specify the target and the query.
+
+*Target*
+
+- This is where we reference our *Source* step which accesses the SQL server and database.
+
+*Query*
+
+- This is the important part. We need to specify what data we are trying to query from our database
+
+```
+MyQuery = Value.NativeQuery(
+     Source,
+     "SELECT 
+          .CustomerName, 
+          S.CustomerID
+      FROM SalesTransactions S
+      WHERE S.CustomerName LIKE 'James%'"
+)
+```
+
+Here is an example of using a query in the parameter. It is essentially no different than writing a query directly in the database.
