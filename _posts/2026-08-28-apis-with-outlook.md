@@ -56,13 +56,16 @@ Section 2.2 Messages
 Let's say we want to grab the emails from our Inbox.
 
 ```
-https://graph.microsoft.com/v1.0/me/mailFolders/AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MAAuAAAAAAB8dGH_gOEhS58qBHWH-2K3AQCMJW4mPim-Q7mgBNUhcMAjAAAAAAEtAAA=
+https://graph.microsoft.com/v1.0/me/mailFolders/
+AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MAAuAAAAAAB8dGH_gOEhS58qBHWH-2K3AQCMJW4mPim-Q7mgBNUhcMAjAAAAAAEtAAA=
 ```
 
 After */mailFolders*, we want to use the *id* of the folder in our URL. However, this URL alone will just give us the folder properties. To access the emails in the folder, we add */messages* to the end of our URL. 
 
 ```
-https://graph.microsoft.com/v1.0/me/mailFolders/AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MAAuAAAAAAB8dGH_gOEhS58qBHWH-2K3AQCMJW4mPim-Q7mgBNUhcMAjAAAAAAEtAAA=/messages
+https://graph.microsoft.com/v1.0/me/mailFolders/
+AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MAAuAAAAAAB8dGH_gOEhS58qBHWH-2K3AQCMJW4mPim-Q7mgBNUhcMAjAAAAAAEtAAA=
+/messages
 ```
 
 Section 2.3 Outlook Categories
@@ -70,7 +73,12 @@ Section 2.3 Outlook Categories
 Now that we got the messages, we may want to look at other properities of our message such as the category. We can use a URL such as
 
 ```
-https://graph.microsoft.com/v1.0/me/mailFolders/AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MAAuAAAAAAB8dGH_gOEhS58qBHWH-2K3AQCMJW4mPim-Q7mgBNUhcMAjAAAAAAEMAAA=/messages/AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MABGAAAAAAB8dGH_gOEhS58qBHWH-2K3BwCMJW4mPim-Q7mgBNUhcMAjAAAAAAEMAACMJW4mPim-Q7mgBNUhcMAjAAAAAE3XAAA=/categories
+https://graph.microsoft.com/v1.0/me/mailFolders/
+AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MAAuAAAAAAB8dGH_gOEhS58qBHWH-2K3AQCMJW4mPim
+Q7mgBNUhcMAjAAAAAAEMAAA=/
+messages/
+AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MABGAAAAAAB8dGH_gOEhS58qBHWH-2K3BwCMJW4mPim-Q7mgBNUhcMAjAAAAAAEMAACMJW4mPim-Q7mgBNUhcMAjAAAAAE3XAAA=/
+categories
 ```
 
 Here is a breakdown of this URL:
