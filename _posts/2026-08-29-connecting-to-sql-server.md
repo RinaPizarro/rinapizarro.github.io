@@ -54,3 +54,14 @@ Sql.Database(server as text, database as text, optional options as nullable reco
 - Here we will specify the name of our database. A SQL server may have multiple databases, but our query would only use one database.
 - This could be something like *Production* if that's the name of the database.
 
+Section 2.2 Value.NativeQuery
+
+```
+Value.NativeQuery(
+    target as any,
+    query as text,
+    optional parameters as any,
+    optional options as nullable record
+) as any
+```
+
