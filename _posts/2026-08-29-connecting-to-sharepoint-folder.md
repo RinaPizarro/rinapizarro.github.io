@@ -17,5 +17,5 @@ Let's begin by figuring out what function we need to use for our first step. Fir
 SharePoint.Files(url as text, optional options as nullable record)
 ```
 
-- The *url* must the root URL of the SharePoint website, not the direct URL to the target folder. Therefore, if our direct URL to the target folder is something like *https://sharepoint.com/companyname/documents/weeklyreports/* then our root URL would be 
+- The *url* must the root URL of the SharePoint website, not the direct URL to the target folder. Therefore, if our direct URL to the target folder is something like *https://sharepoint.com/companyname/documents/weeklyreports/* then our root URL would be *https://sharepoint.com/companyname*
 
