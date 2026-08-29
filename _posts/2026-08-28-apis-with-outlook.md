@@ -81,6 +81,36 @@ Here is a breakdown of this URL:
 - **AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MABGAAAAAAB8dGH_gOEhS58qBHWH-2K3BwCMJW4mPim-Q7mgBNUhcMAjAAAAAAEMAACMJW4mPim-Q7mgBNUhcMAjAAAAAE3XAAA=** is the id of one of the emails in my inbox
 - **categories** gives me an array of categories associated with the email.
 
+Section 2.4 Attachments
+
+```
+https://graph.microsoft.com/v1.0/me/mailFolders/AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MAAuAAAAAAB8dGH_gOEhS58qBHWH-2K3AQCMJW4mPim-Q7mgBNUhcMAjAAAAAAEMAAA=/messages/AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MABGAAAAAAB8dGH_gOEhS58qBHWH-2K3BwCMJW4mPim-Q7mgBNUhcMAjAAAAAAEMAACMJW4mPim-Q7mgBNUhcMAjAAAAAE3XAAA=/attachments
+```
+
+The following would be a URL for retrieving attachments. The output will be an array of attachments as a JSON object.
+
+```
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+  "value": [
+    {
+      "@odata.type": "microsoft.graph.fileAttachment",
+      "contentType": "contentType-value",
+      "contentLocation": "contentLocation-value",
+      "contentBytes": "contentBytes-value",
+      "contentId": "null",
+      "lastModifiedDateTime": "datetime-value",
+      "id": "id-value",
+      "isInline": false,
+      "name": "name-value",
+      "size": 99
+    }
+  ]
+}
+```
+
 ### Section 3 Query Parameters
 
 Section 1.1 Common Parameters
