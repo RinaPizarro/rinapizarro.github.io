@@ -120,7 +120,18 @@ Now we have only the latest file! The only thing that left is reading the file s
 
 Before we do this, we need to know if our data is formatted as a *sheet* or as a *table.* If our data is formatted as a *table* then Power Query will have an easier time determining the headers. However, if our data is in a *sheet* then we need to male sure Power Query promotes those headers. Otherwise, our header names will remain as row one rather than column headers.
 
+Alright, let's start grabbing out sheet or table. To do this, we will need the function *Excel.Workbook().*
+
 ```
+Excel.Workbook(
+    workbook as binary,
+    optional useHeaders as any,
+    optional delayTypes as nullable logical
+)
+```
+
+- *Workbook* will be the name of our previous step.
+
 ```
 let
      Source = SharePoint.Files("https://sharepoint.com/analyststudios.com", [ApiVersion = 15]),
