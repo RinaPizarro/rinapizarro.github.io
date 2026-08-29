@@ -28,6 +28,6 @@ https://graph.microsoft.com/v1.0/me
 
 If we run the URL above, we get something similar like this:
 
-![](/assets/images/graph_api_basic_url_example_1.png){:width="300px"}
+![](/assets/images/graph_api_basic_url_example_1.png){:height="300px"}
 
 Our output ends up being. JSon object that has various keys with values. 
