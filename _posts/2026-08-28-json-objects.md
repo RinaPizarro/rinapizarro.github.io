@@ -66,9 +66,7 @@ outputs('Get_user_profile')?['body']?['user']?['firstName']
 
 The best way to understanding retrieveing properties in an object is by using an example. Let's walk through a flow with its inputs and outputs.
 
-![](/assets/images/power_automate_http_request_flow_example_1.png)
-
-{:width=200px}
+![](/assets/images/power_automate_http_request_flow_example_1.png){:height="200px"}
 
 - We begin with creating an intiial action. For this, we're simply going to *manually trigger a flow*.
 - I have an *HTTP request* that retrieves the emails in my inbox as objects in an array. 
@@ -89,9 +87,7 @@ We pass this expression above as our input. If we open up the output, we see thi
 
 
 
-![](/assets/images/power_automate_apply_to_each_input.png)
-
-{:width=200px}
+![](/assets/images/power_automate_apply_to_each_input.png){:height="200px"}
 
 Recall that our output from email contained a *body* value with the propert *array* of our emails as objects. Therefore, we get our emails with the *value* property. 
 
@@ -101,6 +97,6 @@ items('Apply_to_each')?['receivedDateTime']
 
 Now we want to get the *receivedDateTime* of each email. To do so, we use the expression above. 
 
-![](/assets/images/power_automate_compose_output_example_1.png){:width=200px}
+![](/assets/images/power_automate_compose_output_example_1.png){:height="100px"}
 
 This ends up being our output.
