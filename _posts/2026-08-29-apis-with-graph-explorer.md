@@ -173,3 +173,4 @@ Section 4.2 Accessing Organizational User Data
 - Mail.ReadBasic.Shared
 - Mail.ReadWrite.Shared
 
+Please note that Graph Explorer permission is different than permissions than Outlook permissions. While you may be able to view a shared inbox in Outlook, that does not mean you have the permissions through Graph Explorer to read or write data. Microsoft Entra ID and Graph need to know that the **application itself** is authorized to access mail
