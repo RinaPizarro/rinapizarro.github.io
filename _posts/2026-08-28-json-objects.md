@@ -28,3 +28,7 @@ Values can be strings, integers, arrays, or booleans. So if you want to extract 
 variables('ObjectName')?['KeyName']
 ```
 
+- *variables('ObjectName')* gets the value stored in the object *ObjectName*
+- *?* acts as a safe navigator. If the value is *null* or the property doesn't exist, it will not break
+- *['KeyName']* retrieves the value of the specified key
+
