@@ -73,7 +73,7 @@ The best way to understanding retrieveing properties in an object is by using an
 - I want to *apply to each* email object a series of steps.
 - My *compose* action will compose the receivedDateTime property for each email.
 
-![](/assets/images/power_automate_send_an_http_request_output.png){:width=200px}
+![](/assets/images/power_automate_send_an_http_request_output.png){:height="400px"}
 
 Here is the **Output** for **Send an HTTP Request**. We can see our headers, statusCode, metadata, and our body which contains the property value which contains an array of objects. These objects are our emails in JSON. 
 
@@ -87,7 +87,7 @@ We pass this expression above as our input. If we open up the output, we see thi
 
 
 
-![](/assets/images/power_automate_apply_to_each_input.png){:height="200px"}
+![](/assets/images/power_automate_apply_to_each_input.png){:height="400px"}
 
 Recall that our output from email contained a *body* value with the propert *array* of our emails as objects. Therefore, we get our emails with the *value* property. 
 
