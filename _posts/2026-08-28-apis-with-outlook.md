@@ -65,6 +65,8 @@ After */mailFolders*, we want to use the *id* of the folder in our URL. However,
 https://graph.microsoft.com/v1.0/me/mailFolders/AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MAAuAAAAAAB8dGH_gOEhS58qBHWH-2K3AQCMJW4mPim-Q7mgBNUhcMAjAAAAAAEtAAA=/messages
 ```
 
+Section 2.3 
+
 ### Section 3 Query Parameters
 
 Section 1.1 Common Parameters
