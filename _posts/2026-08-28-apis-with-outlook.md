@@ -30,4 +30,18 @@ If we run the URL above, we get something similar like this:
 
 ![](/assets/images/graph_api_basic_url_example_1.png){:height="300px"}
 
-Our output ends up being. JSon object that has various keys with values. 
+Our output ends up being a JSON object that has various keys with values. 
+
+```
+https://graph.microsoft.com/v1.0/me/mailFolders
+```
+
+![](/assets/images/graph_api_mailfolders.png){:height="300px"}
+
+Here is an example of a URL that gets our folders or *mailFolders*. Emails, or *messages*, are organized in our *mailFolders*. As we can see in our screenshot, we have a mailFolder called *Arhcivo* and another one called *Bandeja de Entrada*. 
+
+- *id* is the identifier for the folder object. 
+- *displayName* is the name of the folder as it appears in Outlook
+- *parentFolderId* is the ID of the folder in which the current folder object resides in
+- *childFolderCount* lets us know the number of subfolders in the current folder object 
+
