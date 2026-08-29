@@ -56,4 +56,9 @@ Now that we have the list of objects, we may want to access a specific property.
 outputs('Action_name')?['body']?['receivedDateTime']
 ```
 
-We are essentially telling JSON to keep searching until we hit the property named *receivedDateTime* and return the value of the property.
+We are essentially telling JSON to keep searching until we hit the property named *receivedDateTime* and return the value of the property. Depending on your action output, your target property make be deeply nested.
+
+```
+outputs('Get_user_profile')?['body']?['user']?['firstName']
+```
+
