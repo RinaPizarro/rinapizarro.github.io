@@ -26,8 +26,8 @@ Web.Page(html as any)
 
 This function is great for scraping HTML elements. It processes a complete HTML documents into table structures.
 
+### Section 2 Building API connection
 
 
-&nbsp;
 
 &nbsp;
