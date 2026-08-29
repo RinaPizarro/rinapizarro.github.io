@@ -146,3 +146,6 @@ https://graph.microsoft.com/v1.0/me/mailFolders/AAMkADlmZTFiNzc1LThjZTEtNDgyYi04
 ```
 
 At the end of our query that retrieves all messages from our Inbox, I added *$* to specify the scope to search and *$top=10* to specify the parameter.
+
+### Section 4 Permissions
+
