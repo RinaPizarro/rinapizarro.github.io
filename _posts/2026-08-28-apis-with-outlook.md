@@ -30,9 +30,7 @@ If we run the URL above, we get something similar like this:
 
 
 
-![](/assets/images/graph_api_basic_url_example_1.png)
-
-{:height="300px"}
+![](/assets/images/graph_api_basic_url_example_1.png){:height="300px"}
 
 ### Section 2 Retrieving Emails
 
