@@ -43,3 +43,14 @@ Section 2.1 SQL.Database
 Sql.Database(server as text, database as text, optional options as nullable record) as table
 ```
 
+*Server* 
+
+- This will be the network address or the machine name of the SQL server.
+- This could be something like *192.168.1.50.*
+- If the server is running on an instance, the server name could be *PROD-SQL-01\REPORTING*.
+
+*Database*
+
+- Here we will specify the name of our database. A SQL server may have multiple databases, but our query would only use one database.
+- This could be something like *Production* if that's the name of the database.
+
