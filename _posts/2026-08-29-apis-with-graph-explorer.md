@@ -1,7 +1,7 @@
 ---
 layout: post
 title: APIs with Graph Explorer
-categories: graphAPI
+categories: graphapi
 description: This guide will go over how to use APIs in graph explorer
 ---
 Microsoft Graph allows you to use APIs to retrieve information from sources such as Outlook (which will be this guide's topic). 
