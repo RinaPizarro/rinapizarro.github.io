@@ -134,6 +134,16 @@ Excel.Workbook(
 - *useHeaders* can be *True* if we want to use the headers or *False* if we don't want to use the headers. By default, this is *False*.
 - *delayTypes* can be True if we want Power Query to hold on on assigning data types to each column, or *False* if we want Power Query to go ahead and determine the data types of each column. By default, this is *False.*
 
+Now we need to index in our Workbook. To do so, we use the following Syntax:
+
+```
+expression{selector}
+```
+
+This tells Power Query to take the expression and access a specific item in the expression.
+
+If we are working with a sheet, our Item will be the sheet name and our kind will be sheet. If we are working with a table, our item will be the table name and our kind will be table. Putting all this together, we get our finalized query:
+
 ```
 let
      Source = SharePoint.Files("https://sharepoint.com/analyststudios.com", [ApiVersion = 15]),
