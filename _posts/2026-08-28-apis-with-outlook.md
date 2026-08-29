@@ -67,3 +67,36 @@ https://graph.microsoft.com/v1.0/me/mailFolders/AAMkADlmZTFiNzc1LThjZTEtNDgyYi04
 
 ### Section 3 Query Parameters
 
+Section 1.1 Common Parameters
+
+When we are passing a URL into our graph explorer, we may want to give certain parameters
+
+
+| Name | Description | Example |
+| ---------- | --------------------------------------------- | ------------------------------------------ |
+| *$count* | returns the total count of matching resources | */me/messages?$top=2&count=true* |
+| *$expand* | returns related resources | */groups?$expand=members* |
+| *$filter* | filters rows | */users?$filter=startswith(givenName,'J')* |
+| *$format* | returns results in a specified format | */uers?$format=json* |
+| *$orderby* | orders results | */users?$orderby=displayName desc* |
+| *$search* | filters columns | */me/messages?$search=pizza* |
+| *$select* | skip items | */users?$select=givenName,surname* |
+| *$top* | sets the paze size of results | */users?$top=2* |
+
+
+- *OrderBy*
+  - You may specify the column name to order along with ascending  as *asc* or decending order as *desc*
+
+```
+?$orderby=name desc
+```
+
+Section 1.2 Syntax
+
+Now that we know what are the most common parameters, we may want to filter by multiple parameters
+
+```
+https://graph.microsoft.com/v1.0/me/mailFolders/AAMkADlmZTFiNzc1LThjZTEtNDgyYi04MTAxLWJkMzY4OGRmZTI3MAAuAAAAAAB8dGH_gOEhS58qBHWH-2K3AQCMJW4mPim-Q7mgBNUhcMAjAAAAAAEtAAA=/messages?$top=10
+```
+
+At the end of our query that retrieves all messages from our Inbox, I added *$* to specify the scope to search and *$top=10* to specify the parameter.
