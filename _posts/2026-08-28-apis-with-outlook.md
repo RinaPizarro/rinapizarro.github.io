@@ -26,3 +26,8 @@ https://graph.microsoft.com/v1.0/me
   - */me* is the currently authenticated user 
   - */users* is all users in your Microsoft 365 organization/ tenant
 
+If we run the URL above, we get something similar like this:
+
+![](/assets/images/graph_api_basic_url_example_1.png){:width="300px"}
+
+Our output ends up being. JSon object that has various keys with values. 
