@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Connecting to SQL server
+title: Connecting to SQL Server
 categories: powerquery
 description: This guide will explain the proper steps to connecting to your SQL
   database in Power Query.
