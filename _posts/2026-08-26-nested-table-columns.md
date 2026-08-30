@@ -63,5 +63,21 @@ The advanced edtior is one way to group columns into tables. The second way is u
 
 ### Section 2 *Table.TransformColumns()*
 
-Now that we have created our nested table column,
+Now that we have created our nested table column, we may want to create new columns, remove rows, or transform the data in general. To achieve this, we use the *table.transformcolumns()* function.
 
+```
+Table.TransformColumns(
+    table as table,
+    transformOperations as list,
+    optional defaultTransformation as nullable function,
+    optional missingField as nullable number
+)
+```
+
+
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
