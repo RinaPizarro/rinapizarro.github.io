@@ -75,7 +75,7 @@ Table.TransformColumns(
 ```
 
 - *table* will be the previous step
-- *transformOperations* will take the form of *{Column name as string, transformation, optional new column type}.* 
+- *transformOperations* will take the form of *{Column name as string, transformation, optional new column type}*
 
 
 
