@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GROUP BY, HAVING
+title: GROUP BY, HAVING, COUNT, SUM, AVG
 categories: sql
 ---
 ### Section 1 Understanding Aggregation
@@ -13,3 +13,6 @@ Let's begin by understanding how our database breaks down aggregations:
 4. Post Aggregation Phase: HAVING clauses filters the applied aggregations
 5. Ordering Phase: ORDER BY is applied as the final step
 
+### Section 2 Aggregate Functions
+
+**Aggregate Functions** are functions that perform calculations on a set of value, and returns a single value. All aggregate functions ignore *null* values except for *COUNT(*).* 
