@@ -64,7 +64,15 @@ SELECT CONCAT_WS('_', 'shoes', 'for', 'sale');
 // output: shoes_for_sale
 ```
 
+*FORMAT()*
 
+- Format a number as a string in a specific way, often with commas for thousands or with a specific number of decimal places. 
+
+```
+SELECT FORMAT(0.981 * 100, 'N2') + '%' AS PercentageOutput;
+
+// output: 98.10%
+```
 
 ### Section 2 Finding Substrings
 
