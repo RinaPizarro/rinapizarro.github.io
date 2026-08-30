@@ -40,5 +40,20 @@ Please note that there are different formats.
 - MONTH (full name of the month)
 - YYYY
 - YY
-- 
 
+*TO_NUMBER()*
+
+```
+TO_NUMBER(string, format_mask)
+```
+
+- *string* is your number in type text
+- *format_mask* specifies the format of the output
+
+
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
