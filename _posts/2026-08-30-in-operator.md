@@ -35,6 +35,5 @@ WHERE customer_country IN ('United States', 'Canada', 'Mexico',
                            'United Kingdom', 'Australia');
 ```
 
+This makes the syntax easier to read and edit (such as if we need to add or remove a value from the IN statement). 
 
-
-&nbsp;
