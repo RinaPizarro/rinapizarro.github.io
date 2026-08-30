@@ -82,3 +82,18 @@ SELECT MAX(SalesDate) FROM SalesTable GROUP BY CustomerName
 ```
 
 Section 2.3 *HAVING()*
+
+If you are trying to use a filter while using an aggregate function, you cannot use *where* clause. You would need to use the *having()* clause. 
+
+```
+SELECT 
+    department_id,
+    AVG(salary) AS average_salary
+FROM employees
+GROUP BY department_id
+HAVING AVG(salary) > 75000;
+```
+
+
+
+&nbsp;
