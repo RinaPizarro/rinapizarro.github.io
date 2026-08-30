@@ -41,6 +41,5 @@ Suppose we have a table about Uber drives. Let's say we want to group the rides 
 
 ![](/assets/images/power_query_group_by_function.png){:width="300px"}
 
+- Our *table* parameter is filled by our previous step named *#"Changed Type 1"*
 
-
-&nbsp;
