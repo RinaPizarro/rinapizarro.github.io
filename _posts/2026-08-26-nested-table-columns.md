@@ -23,3 +23,13 @@ Table.Group(
 - *key* can be either be a single column, or it can be a list of columns that you wish to group together.
 - *aggregatedColumns* are all the columns you want to included within the group.
 
+Let's say we 
+
+```
+= Table.Group( 
+    Source,
+    { "CustomerID" },
+    { "Total", each List.Sum( _[Price] ), Int64.Type }
+ )
+```
+
