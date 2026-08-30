@@ -101,10 +101,16 @@ Table.FromRecords(
 - *records* is the list containg records that need to be converted to table
 - *columns* is a list of the table column names
 
+```
+Record.TransformFields(
+    record as record,
+    transformOperations as list,
+    optional missingField as nullable number
+)
+```
+
+- `transformOperations` is expected to be a list with two items. The first item in `transformOperations` specifies a field name, and the second item in `transformOperations` specifies the function to be used for transformation. For example, `{"Quantity", Number.FromText}`
 
 
-&nbsp;
-
-&nbsp;
 
 &nbsp;
