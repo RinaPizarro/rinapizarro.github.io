@@ -74,4 +74,5 @@ There is a difference between these two operators and thus, it is important to k
 
 - *EXISTS* efficiently stops scanning when it finds the first matching record. *IN* continues searching for all values
 - *EXISTS* can compare *null* values. *IN* cannot compare null values
+- Database will evaluate *IN* subquery first. In other words, the IN subquery is loaded into the memory first before the outer query. Thus, if the database is large, *IN* will have a slower performance.
 
