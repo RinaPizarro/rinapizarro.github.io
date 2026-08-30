@@ -115,11 +115,20 @@ Record.TransformFields(
 
 ```
 = Table.FromRecords(
-    Table.TransformRows(#"Previous Step", (outerRow) => 
-        Record.TransformFields(outerRow, {
-            "NestedTableColumn", 
-            each Table.AddColumn(_, "NewInnerColumn", each outerRow[OuterColumnName])
-        })
+    Table.TransformRows(
+        #"Previous Step",
+        (outerRow) =>
+            Record.TransformFields(
+                outerRow,
+                {
+                    "NestedTableColumn",
+                    each Table.AddColumn(
+                        _,
+                        "NewInnerColumn",
+                        each outerRow[OuterColumnName]
+                    )
+                }
+            )
     )
 )
 ```
