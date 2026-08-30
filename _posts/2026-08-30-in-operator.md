@@ -52,6 +52,5 @@ WHERE EXISTS (
      WHERE COLUMN2 = TABLE1.COLUMN2 )
 ```
 
+*SELECT 1* is used because `EXISTS` doesn't care what the subquery selects. You could also use *SELECT **
 
-
-&nbsp;
