@@ -88,7 +88,22 @@ Now that we understand how the function works, lets use this function in our que
 
 Section 2.2 Referencing outer table
 
+Now that we know how to transform the nested table columns, we may want to consider how to reference our outer table. We will need to understand a few different functions to acheieve this.
 
+```
+Table.FromRecords(
+    records as list,
+    optional columns as any,
+    optional missingField as nullable number
+) 
+```
+
+- *records* is the list containg records that need to be converted to table
+- *columns* is a list of the table column names
+
+
+
+&nbsp;
 
 &nbsp;
 
