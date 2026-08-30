@@ -54,6 +54,12 @@ SELECT REPLACE('Hello World', 'World', 'Bob') AS UpdatedString
 TRIM('Hello World    ')
 ```
 
+*CONCAT_WS()*
+
+
+
+&nbsp;
+
 ### Section 2 Finding Substrings
 
 Section 2.2 Functions for finding substrings
