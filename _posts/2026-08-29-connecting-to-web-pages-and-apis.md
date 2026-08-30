@@ -40,6 +40,3 @@ The best way to understand these functions is to give an example. Therefore, let
 
 ## Section 2
 
-
-
-&nbsp;
