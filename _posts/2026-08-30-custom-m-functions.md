@@ -15,6 +15,21 @@ in
      result
 ```
 
+- your function can have more than one input. For example, you can use (x, y) as your parameters. 
 
+Therefore, if you use
 
-&nbsp;
+```
+(name, age) =>
+let
+    result = name & " is " & Text.From(age) & " years old"
+in
+    result
+```
+
+then you can call it by using
+
+```
+myFunction("Jessica", 25)
+```
+
