@@ -81,9 +81,10 @@ Now that we understand how the function works, lets use this function in our que
 
 ![](/assets/images/power_query_transform_nested_table_column.png){:width="300px"}
 
+- We begin by defining our *table* as our previous step which was *#"Grouped Rows"*
+- We then begin creating our list for *transformOperations*. Our nested table column is called *Vehicle Type*. We then add an *each* to tell Power Query to transform each row in the *Vehicle Type* column. We then use *Table.SelectRows()* to select the rows in each nested table that contains the text "he"
 
 
-&nbsp;
 
 &nbsp;
 
