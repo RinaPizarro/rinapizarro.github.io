@@ -61,7 +61,9 @@ The advanced edtior is one way to group columns into tables. The second way is u
 
 {:width="300px"}
 
-### Section 2 *Table.TransformColumns()*
+### Section 2 *Editing the Table Column*
+
+Section 2.1 *table.transformColumns()*
 
 Now that we have created our nested table column, we may want to create new columns, remove rows, or transform the data in general. To achieve this, we use the *table.transformcolumns()* function.
 
@@ -84,9 +86,9 @@ Now that we understand how the function works, lets use this function in our que
 - We begin by defining our *table* as our previous step which was *#"Grouped Rows"*
 - We then begin creating our list for *transformOperations*. Our nested table column is called *Vehicle Type*. We then add an *each* to tell Power Query to transform each row in the *Vehicle Type* column. We then use *Table.SelectRows()* to select the rows in each nested table that contains the text "he"
 
+Section 2.2 Referencing outer table
 
 
-&nbsp;
 
 &nbsp;
 
