@@ -6,7 +6,7 @@ description: This guide will explain how to use IN operator in SQL.
 ---
 ### Section 1 IN Operator
 
-***IN*** is an operator that tells the database whether a value exists in a specified list of values. 
+**IN** is an operator that tells the database whether a value exists in a specified list of values. 
 
 ```
 test_expression [ NOT ] IN   
@@ -41,8 +41,12 @@ This makes the syntax easier to read and edit (such as if we need to add or remo
 
 ### Section 2 Exists Operator
 
+**EXISTS** is an operator that checks if a subquery contains any of the rows
+
+```
+EXISTS (subquery)
+```
 
 
-&nbsp;
 
 &nbsp;
