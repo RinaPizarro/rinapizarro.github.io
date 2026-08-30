@@ -113,6 +113,14 @@ Record.TransformFields(
 
 *Table.FromRecords()*, *Record.TransformFields()* and *Table.TransformColumns()* will be our building blocks to reference our outer table while we transform our inner table.
 
+```
+= Table.FromRecords(
+    Table.TransformRows(#"Previous Step", (outerRow) => 
+        Record.TransformFields(outerRow, {
+            "NestedTableColumn", 
+            each Table.AddColumn(_, "NewInnerColumn", each outerRow[OuterColumnName])
+        })
+    )
+)
+```
 
-
-&nbsp;
