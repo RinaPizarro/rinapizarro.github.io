@@ -41,7 +41,7 @@ This makes the syntax easier to read and edit (such as if we need to add or remo
 
 ### Section 2 Exists Operator
 
-**EXISTS** is an operator that checks if a subquery contains any of the rows
+**EXISTS** is an operator that checks if a subquery contains any of the rows. The subquery is evaluated to determine whether it returns any rows. If it returns at least one row, the result of `EXISTS` is “true”; if the subquery returns no rows, the result of `EXISTS` is “false”.
 
 ```
 EXISTS (subquery)
