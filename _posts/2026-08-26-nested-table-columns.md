@@ -7,7 +7,9 @@ description: This guide will explain working with nested table columns in the
 ---
 ### Section 1 *Table.Group()*
 
-Before we can understand how nested table columns work, we should begin by understanding the *table.group()* function. 
+Section 1.1 Understanding *Table.Group()*
+
+Before we can understand how nested table columns work, we should begin by understanding the *table.group()* function
 
 ```
 Table.Group(
