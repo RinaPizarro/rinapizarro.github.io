@@ -9,6 +9,8 @@ If we have a column that contains html text of an email body, we need to know ho
 
 The Text library in Power Query is a collection of functions for transformating text data. More often than not, the first argument will be the text you want to work with.
 
+Section 1.1 Cleaning up Text
+
 - *Text.Trim()* removes leading and trailing whitespaces at the beginning and end of a string.
 - *Text.Clean()* removes non-printable characters or invisible characters.
 - *Text.Proper()* capitalizes the first letter of each word in a string, and it lowercases everything else.
@@ -20,9 +22,9 @@ TransformedNames = Table.TransformColumns(
 )
 ```
 
+Section 1.2 Parsing and Extracting substrings
 
 
-&nbsp;
 
 &nbsp;
 
