@@ -40,3 +40,19 @@ Section 2.1 Introduction to Aggregate Functions
 All of our examples will comebine aggregate functions with *GROUP BY()*. However, we don't always need to use the *GROUP BY()* function. 
 
 Section 2.2 Common Aggregate Functions
+
+*COUNT(*)*
+
+- tells you how many rows meet the criteria
+
+```
+SELECT COUNT(*) FROM SalesTable
+```
+
+This query will tell us how many rows exist in the SalesTable
+
+```
+SELECT COUNT(*) FROM SalesTable GROUP BY CustomerName
+```
+
+This query tells us how many rows exist for each Customer in the SalesTable. 
