@@ -28,8 +28,11 @@ Section 1.2 Parsing and Extracting Substrings
 - *Text.End(text, count)* returns the last count characters.
 - *Text.Middle(text, offset, count)* starts at the offset position and returns the count characters. Omitting *Count* returns everything from offset to the end of the string. 
 
+Section 1.3 Splitting Text
+
+- *Text.Split(text, seperator)* divides a string at every seperator and returns a list of every string identified.
+- 
 
 
-&nbsp;
 
 &nbsp;
