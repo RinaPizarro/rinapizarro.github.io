@@ -107,7 +107,7 @@ LEFT(string or column name, number of characters to extract)
 
 Section 2.2 Example of finding substring
 
-![](/assets/images/sql_finding_substring_example.png){:width="200px"}
+![](/assets/images/sql_finding_substring_example.png){:width="80px"}
 
 
 ![](/assets/images/sql_finding_substring_output.png){:width="200px"}
