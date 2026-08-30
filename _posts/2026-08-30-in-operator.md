@@ -58,12 +58,12 @@ The most important part of this entire subquery is `WHERE COLUMN2 = TABLE1.COLUM
 
 ```
 SELECT *
-FROM customers c
+FROM employees e
 WHERE EXISTS (
     SELECT 1
-    FROM orders o
-    WHERE o.customer_id = c.customer_id
-);
+    FROM departments d
+    WHERE d.manager_id = e.employee_id
+)
 ```
 
-If EXISTS evaluated to True, it keeps the row. If it evaluates to False, it does not keep the row in the output.
+If EXISTS evaluated to True, it keeps the row. If it evaluates to False, it does not keep the row in the output. In the example above, we are returning all the employees that are also considered managers.
