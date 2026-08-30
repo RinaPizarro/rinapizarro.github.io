@@ -51,3 +51,7 @@ in
 
 Section 1.5 Combining Text
 
+- *Text.Combine()* can be used to combine strings in a list'
+- *Text.Replace(text, old new)*
+- 
+
