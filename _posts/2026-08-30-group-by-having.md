@@ -75,5 +75,9 @@ SELECT AVG(*) FROM SalesTable GROUP BY SalesPrice
 
 *MIN()* and *MAX()*
 
-- returns the minimum value or maximum value in a column.
+- returns the minimum value or maximum value in a column (numbers, text, and dates)
+
+```
+SELECT MAX(*) FROM SalesTable GROUP BY SalesDate
+```
 
