@@ -38,4 +38,17 @@ Section 1.4 Searching within Strings
 - *Text.Contains()*
 - *Text.StartsWith()*
 - *Text.EndsWith()*
+- *Text.PositionOf(text, substring) returns -1 if not found, and the number position of the string*
 
+```
+let
+    email = "jsmith@northernlights.com",
+    atPosition = Text.PositionOf(email, "@"),
+    domain = Text.Middle(email, atPosition + 1)
+in
+    domain
+```
+
+
+
+&nbsp;
