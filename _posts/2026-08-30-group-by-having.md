@@ -15,4 +15,23 @@ Let's begin by understanding how our database breaks down aggregations:
 
 ### Section 2 Aggregate Functions
 
-**Aggregate Functions** are functions that perform calculations on a set of value, and returns a single value. All aggregate functions ignore *null* values except for *COUNT(*).* Aggregate functions are **determinstic**, which are functions that always return the same result any time they are called with specific set of input values and given the same state of the datatbase. 
+**Aggregate Functions** are functions that perform calculations on a set of value, and returns a single value. All aggregate functions ignore *null* values except for *COUNT(*).* Aggregate functions are **determinstic**, which are functions that always return the same result any time they are called with specific set of input values and given the same state of the database. Although we will only go through a a select few of aggregate functions, here are all the aggregate functions identified by Microsoft:
+
+- ANY_VALUE
+- APPROX_COUNT_DISTINCT
+- AVG
+- CHECKSUM_AGG
+- COUNT
+- COUNT_BIG
+- GROUPING
+- GROUPING_ID
+- MAX
+- MIN
+- PRODUCT
+- STDEV
+- STDEVP
+- STRING_AGG
+- SUM
+- VAR
+- VARP
+
