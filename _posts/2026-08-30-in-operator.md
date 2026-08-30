@@ -67,3 +67,8 @@ WHERE EXISTS (
 ```
 
 If EXISTS evaluated to True, it keeps the row. If it evaluates to False, it does not keep the row in the output. In the example above, we are returning all the employees that are also considered managers.
+
+### Section 3 IN versus EXISTS
+
+There is a difference between these two operators and thus, it is important to know which one to use depending on our desired output.
+
