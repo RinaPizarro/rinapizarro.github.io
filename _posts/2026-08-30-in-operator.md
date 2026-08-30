@@ -1,9 +1,11 @@
 ---
 layout: post
-title: IN operator
+title: IN and EXISTS operator
 categories: sql
 description: This guide will explain how to use IN operator in SQL.
 ---
+### Section 1 IN Operator
+
 ***IN*** is an operator that tells the database whether a value exists in a specified list of values. 
 
 ```
@@ -37,3 +39,10 @@ WHERE customer_country IN ('United States', 'Canada', 'Mexico',
 
 This makes the syntax easier to read and edit (such as if we need to add or remove a value from the IN statement). 
 
+### Section 2 Exists Operator
+
+
+
+&nbsp;
+
+&nbsp;
