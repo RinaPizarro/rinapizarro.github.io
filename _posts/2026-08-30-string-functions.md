@@ -16,7 +16,20 @@ Sometimes we need to clean or format our text for comparison and extracting mean
 SELECT CONCAT(FirstName, ' ', LastName) AS FullName
 ```
 
+*CHAR_LENGTH()* or *LENGTH()*
 
+- Returns the length of a string of characters
+
+```
+SELECT CHAR_LENGTH('Hello') AS 'String Length'
+// 5
+```
+
+
+
+&nbsp;
+
+&nbsp;
 
 ### Section 2 Finding Substrings
 
