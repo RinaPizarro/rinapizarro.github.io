@@ -35,7 +35,9 @@ Suppose we have a table with a bunch of columns such as total, price, customer I
  )
 ```
 
-Section 1.2 Example of *Table.Group*
+Section 1.2 Example of *[Table.Group](http://Table.Group)*
+
+Section 1.2.1 Advanced Editor
 
 Suppose we have a table about Uber drives. Let's say we want to group the rides by vehicle type and drop off location.
 
@@ -50,6 +52,8 @@ Our output end up looking something like this:
 ![](/assets/images/power_query_nested_table_columns.png){:width="300px"}
 
 As you can see, we have our vehcile type and drop location as our key columns. Everything else got wrapped into our new column called *All Rides*.
+
+Section 1.2.2 GUI
 
 ![](/assets/images/power_query_group_by_gui.png){:width="300px"}
 
