@@ -50,10 +50,15 @@ TO_NUMBER(string, format_mask)
 - *string* is your number in type text
 - *format_mask* specifies the format of the output
 
+*TO_CHAR()*
+
+```
+TO_CHAR(NUMBER, FORMAT_MASK)
+```
+
+- *number* is your number or date to convert to string
+- *format_mask* tells us how the string should be formatted
 
 
-&nbsp;
-
-&nbsp;
 
 &nbsp;
