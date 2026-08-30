@@ -66,7 +66,7 @@ SELECT CONCAT_WS('_', 'shoes', 'for', 'sale');
 
 *FORMAT()*
 
-- Format a number as a string in a specific way, often with commas for thousands or with a specific number of decimal places. 
+- Format a number as a string in a specific way, often with commas for thousands or with a specific number of decimal places.
 
 ```
 SELECT FORMAT(0.981 * 100, 'N2') + '%' AS PercentageOutput;
@@ -81,7 +81,6 @@ Section 2.2 Functions for finding substrings
 CHARINDEX() 
 
 - Searches for a smaller string inside a larger string
-
 - Return value: position number where smaller string starts
 
 ```
@@ -108,7 +107,4 @@ LEFT(string or column name, number of characters to extract)
 
 Section 2.2 Example of finding substring
 
-![image.png](/assets/images/image.png)
-
-![image.png](/assets/images/image-1.png)
 
