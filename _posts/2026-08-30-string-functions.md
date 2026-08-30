@@ -10,7 +10,7 @@ Sometimes we need to clean or format our text for comparison and extracting mean
 
 *CONCAT()*
 
-- combines two or more strings into one string
+- Combines two or more strings into one string
 
 ```
 SELECT CONCAT(FirstName, ' ', LastName) AS FullName
