@@ -36,9 +36,17 @@ SELECT UPPER('John Smith') as 'Capitalized'
 // output: JOHN SMITH
 ```
 
+*REPLACE()*
+
+- replaces target substring with another string
+
+```
+SELECT REPLACE('Hello World', 'World', 'Bob') AS UpdatedString
+
+// Output: Hello Bob
+```
 
 
-&nbsp;
 
 &nbsp;
 
