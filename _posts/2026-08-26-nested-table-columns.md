@@ -79,6 +79,14 @@ Table.TransformColumns(
 
 Now that we understand how the function works, lets use this function in our query. 
 
+![](/assets/images/power_query_transform_nested_table_column.png){:width="300px"}
 
+
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
