@@ -62,7 +62,7 @@ This query tells us how many rows exist for each Customer in the SalesTable.
 - gives you total summation of a column
 
 ```
-SELECT SUM(*) FROM SalesTable GROUP BY SalesPrice
+SELECT SUM(PaymentTotal) FROM SalesTable GROUP BY CustomerName
 ```
 
 *AVG()* 
@@ -70,7 +70,7 @@ SELECT SUM(*) FROM SalesTable GROUP BY SalesPrice
 - gives you the average of a column
 
 ```
-SELECT AVG(*) FROM SalesTable GROUP BY SalesPrice
+SELECT AVG(Price) FROM SalesTable GROUP BY CustomerName
 ```
 
 *MIN()* and *MAX()*
@@ -78,6 +78,7 @@ SELECT AVG(*) FROM SalesTable GROUP BY SalesPrice
 - returns the minimum value or maximum value in a column (numbers, text, and dates)
 
 ```
-SELECT MAX(*) FROM SalesTable GROUP BY SalesDate
+SELECT MAX(SalesDate) FROM SalesTable GROUP BY CustomerName
 ```
 
+Section 2.3 *HAVING()*
