@@ -25,7 +25,7 @@ Table.Group(
 - *key* can be either be a single column, or it can be a list of columns that you wish to group together.
 - *aggregatedColumns* are all the columns you want to included within the group.
 
-Let's say we have a table with a bunch of columns such as total, price, customer ID, and product name. We can group all the CustomerIDs and get the total sum of price they paid for all products with the following expression:
+Suppose we have a table with a bunch of columns such as total, price, customer ID, and product name. We can group all the CustomerIDs and get the total sum of price they paid for all products with the following expression:
 
 ```
 = Table.Group( 
@@ -35,3 +35,12 @@ Let's say we have a table with a bunch of columns such as total, price, customer
  )
 ```
 
+Section 1.2 Example of *Table.Group*
+
+Suppose we have a table about Uber drives. Let's say we want to group the rides by vehicle type and drop off location.
+
+![](/assets/images/power_query_group_by_function.png){:width="300px"}
+
+
+
+&nbsp;
