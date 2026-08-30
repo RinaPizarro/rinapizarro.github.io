@@ -7,4 +7,4 @@ If we have a column that contains html text of an email body, we need to know ho
 
 ### Section 1 Text Library
 
-The Text library in Power Query is a collection of functions for transformating text data. 
+The Text library in Power Query is a collection of functions for transformating text data. More often than not, the first argument will be the text you want to work with.
