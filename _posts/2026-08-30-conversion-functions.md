@@ -5,3 +5,9 @@ categories: sql
 description: Sometimes we need to convert between data types. This guide will
   review various functions that achieve this goal.
 ---
+*CAST()*
+
+```
+CAST(expression AS datatype(length))
+```
+
