@@ -55,3 +55,14 @@ WHERE EXISTS (
 *SELECT 1* is used because `EXISTS` doesn't care what the subquery selects. You could also use **SELECT *.*
 
 The most important part of this entire subquery is `WHERE COLUMN2 = TABLE1.COLUMN2.` This line refers to the column from the outer table.
+
+```
+SELECT *
+FROM customers c
+WHERE EXISTS (
+    SELECT 1
+    FROM orders o
+    WHERE o.customer_id = c.customer_id
+);
+```
+
