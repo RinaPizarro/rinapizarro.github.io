@@ -35,6 +35,7 @@ TO_DATE(string, format_mask)
 Please note that there are different formats.
 
 - DD (01-31)
+- DAY (full day of the week as Monday to Sunday)
 - MM (01-12)
 - MON (the abbreviation of the month)
 - MONTH (full name of the month)
