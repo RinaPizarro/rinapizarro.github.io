@@ -11,3 +11,11 @@ description: Sometimes we need to convert between data types. This guide will
 CAST(expression AS datatype(length))
 ```
 
+- This function converts the value of any datatype into a target datatype.
+
+```
+SELECT CAST('2017-08-25' AS datetime)
+
+// output: 2017-08-25 00:00:00.000
+```
+
