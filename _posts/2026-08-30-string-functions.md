@@ -108,3 +108,8 @@ LEFT(string or column name, number of characters to extract)
 Section 2.2 Example of finding substring
 
 
+
+
+
+
+
