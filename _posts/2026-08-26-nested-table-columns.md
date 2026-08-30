@@ -35,7 +35,7 @@ Suppose we have a table with a bunch of columns such as total, price, customer I
  )
 ```
 
-Section 1.2 Example of *[Table.Group](http://Table.Group)*
+Section 1.2 Example of *Table.Group()*
 
 Section 1.2.1 Advanced Editor
 
