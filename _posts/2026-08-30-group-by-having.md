@@ -56,3 +56,24 @@ SELECT COUNT(*) FROM SalesTable GROUP BY CustomerName
 ```
 
 This query tells us how many rows exist for each Customer in the SalesTable. 
+
+*SUM()* 
+
+- gives you total summation of a column
+
+```
+SELECT SUM(*) FROM SalesTable GROUP BY SalesPrice
+```
+
+*AVG()* 
+
+- gives you the average of a column
+
+```
+SELECT AVG(*) FROM SalesTable GROUP BY SalesPrice
+```
+
+*MIN()* and *MAX()*
+
+- returns the minimum value or maximum value in a column.
+
