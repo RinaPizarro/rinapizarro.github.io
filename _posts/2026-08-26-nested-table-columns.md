@@ -5,9 +5,7 @@ categories: powerquery
 description: This guide will explain working with nested table columns in the
   power query editor.
 ---
-
-
-### Section 1 Table.Group
+### Section 1 *Table.Group()*
 
 Before we can understand how nested table columns work, we should begin by understanding the *table.group()* function.
 
