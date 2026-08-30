@@ -6,7 +6,7 @@ description: This guide will go over various string functions in SQL.
 ---
 Sometimes we need to clean or format our text for comparison and extracting meaningful information. 
 
-### *Section 1 General Functions*
+### Section 1 General Functions
 
 *concat()* combines two or more strings into one string
 
