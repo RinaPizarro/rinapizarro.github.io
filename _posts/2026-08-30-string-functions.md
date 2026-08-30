@@ -46,9 +46,13 @@ SELECT REPLACE('Hello World', 'World', 'Bob') AS UpdatedString
 // Output: Hello Bob
 ```
 
+*TRIM()*
 
+- Removed leading whitespaces
 
-&nbsp;
+```
+TRIM('Hello World    ')
+```
 
 ### Section 2 Finding Substrings
 
