@@ -30,5 +30,15 @@ TO_DATE(string, format_mask)
 ```
 
 - *string* will be your column name or target string
-- *format_mask* tells your database how to read the string. This could be something like *'yyyy-mm-dd'*
+- *format_mask* tells your database how to read the string. This could be something like *'YYYY-MM-DD'*
+
+Please note that there are different formats.
+
+- DD (01-31)
+- MM (01-12)
+- MON (the abbreviation of the month)
+- MONTH (full name of the month)
+- YYYY
+- YY
+- 
 
