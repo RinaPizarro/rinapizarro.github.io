@@ -12,3 +12,7 @@ test_expression [ NOT ] IN
     )   
 ```
 
+- *test_expression* is any valid expression
+- *subquery* has a result set of one column. This column must have the same data type as *test_expression*.
+- *expression[ **,**... n ]* is a list of expressions to test for a match. All expressions must be of the same type as *test_expression*.
+
