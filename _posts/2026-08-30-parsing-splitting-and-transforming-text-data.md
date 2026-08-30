@@ -11,4 +11,12 @@ The Text library in Power Query is a collection of functions for transformating 
 
 - *Text.Trim()* removes leading and trailing whitespaces at the beginning and end of a string.
 - *Text.Clean()* removes non-printable characters or invisible characters.
+- *Text.Proper()* capitalizes the first letter of each word in a string, and it lowercases everything else.
+
+```
+TransformedNames = Table.TransformColumns(
+    PreviousStep,
+    {{"CustomerName", each Text.Proper(Text.Trim(Text.Clean(_))), type text}}
+)
+```
 
