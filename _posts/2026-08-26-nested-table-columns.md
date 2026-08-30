@@ -49,9 +49,9 @@ Our output end up looking something like this:
 
 ![](/assets/images/power_query_nested_table_columns.png){:width="300px"}
 
+As you can see, we have our vehcile type and drop location as our key columns. Everything else got wrapped into our new column called *All Rides*.
 
 
-&nbsp;
 
 &nbsp;
 
