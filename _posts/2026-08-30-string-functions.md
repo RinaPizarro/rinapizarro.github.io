@@ -25,11 +25,9 @@ SELECT CHAR_LENGTH('Hello') AS 'String Length'
 // 5
 ```
 
+*UPPER()* and *LOWER()*
 
 
-&nbsp;
-
-&nbsp;
 
 ### Section 2 Finding Substrings
 
