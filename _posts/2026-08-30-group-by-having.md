@@ -15,4 +15,4 @@ Let's begin by understanding how our database breaks down aggregations:
 
 ### Section 2 Aggregate Functions
 
-**Aggregate Functions** are functions that perform calculations on a set of value, and returns a single value. All aggregate functions ignore *null* values except for *COUNT(*).* 
+**Aggregate Functions** are functions that perform calculations on a set of value, and returns a single value. All aggregate functions ignore *null* values except for *COUNT(*).* Aggregate functions are **determinstic**, which are functions that always return the same result any time they are called with specific set of input values and given the same state of the datatbase. 
