@@ -35,3 +35,7 @@ Section 1.3 Splitting Text
 
 Section 1.4 Searching within Strings
 
+- *Text.Contains()*
+- *Text.StartsWith()*
+- *Text.EndsWith()*
+
