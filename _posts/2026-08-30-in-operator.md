@@ -66,3 +66,4 @@ WHERE EXISTS (
 );
 ```
 
+If EXISTS evaluated to True, it keeps the row. If it evaluates to False, it does not keep the row in the output.
