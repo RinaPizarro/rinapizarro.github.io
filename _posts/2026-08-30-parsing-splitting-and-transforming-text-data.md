@@ -31,7 +31,7 @@ Section 1.2 Parsing and Extracting Substrings
 Section 1.3 Splitting Text
 
 - *Text.Split(text, seperator)* divides a string at every seperator and returns a list of every string identified.
-- 
+- *Splitter.SplitTextByLengths()* 
 
 
 
