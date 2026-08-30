@@ -23,6 +23,14 @@ Although there are several conversions that can occur in SQL, and these conversi
 
 ![](/assets/images/sql_data_conversion_chart.png){:width="300px"}
 
+*CONVERT()*
+
+```
+CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
+```
+
+
+
 *TO_DATE()*
 
 ```
