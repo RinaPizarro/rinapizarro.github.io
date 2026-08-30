@@ -111,6 +111,8 @@ Record.TransformFields(
 
 - `transformOperations` is expected to be a list with two items. The first item in `transformOperations` specifies a field name, and the second item in `transformOperations` specifies the function to be used for transformation. For example, `{"Quantity", Number.FromText}`
 
+*Table.FromRecords()*, *Record.TransformFields()* and *Table.TransformColumns()* will be our building blocks to reference our outer table while we transform our inner table.
+
 
 
 &nbsp;
