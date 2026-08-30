@@ -22,12 +22,25 @@ SELECT CONCAT(FirstName, ' ', LastName) AS FullName
 
 ```
 SELECT CHAR_LENGTH('Hello') AS 'String Length'
-// 5
+
+// output: 5
 ```
 
 *UPPER()* and *LOWER()*
 
+- Converts entire string to uppercase or lowercase
 
+```
+SELECT UPPER('John Smith') as 'Capitalized'
+
+// output: JOHN SMITH
+```
+
+
+
+&nbsp;
+
+&nbsp;
 
 ### Section 2 Finding Substrings
 
