@@ -49,6 +49,5 @@ in
     domain
 ```
 
+Section 1.5 Combining Text
 
-
-&nbsp;
