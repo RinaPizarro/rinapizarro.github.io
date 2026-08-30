@@ -72,3 +72,6 @@ If EXISTS evaluated to True, it keeps the row. If it evaluates to False, it does
 
 There is a difference between these two operators and thus, it is important to know which one to use depending on our desired output.
 
+- *EXISTS* efficiently stops scanning when it finds the first matching record. *IN* continues searching for all values
+- *EXISTS* can compare *null* values. *IN* cannot compare null values
+
