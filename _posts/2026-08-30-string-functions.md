@@ -8,7 +8,9 @@ Sometimes we need to clean or format our text for comparison and extracting mean
 
 ### Section 1 General Functions
 
-*concat()* combines two or more strings into one string
+*CONCAT()*
+
+- combines two or more strings into one string
 
 ```
 SELECT CONCAT(FirstName, ' ', LastName) AS FullName
