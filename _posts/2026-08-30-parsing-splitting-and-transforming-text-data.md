@@ -5,5 +5,6 @@ categories: powerquery
 ---
 If we have a column that contains html text of an email body, we need to know how to parse it down to a specific line or text. In the real-world, data can be messy. Therefore, we need to know how to clean it up.
 
-### Section 1
+### Section 1 Text Library
 
+The Text library in Power Query is a collection of functions for transformating text data. 
