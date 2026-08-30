@@ -26,10 +26,13 @@ Although there are several conversions that can occur in SQL, and these conversi
 *CONVERT()*
 
 ```
-CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
+CONVERT(data_type(length), expression, style)
 ```
 
-
+- *data_type* is the type to convert *expression* to. Can be one of the following: bigint, int, smallint, tinyint, bit, decimal, numeric, money, smallmoney, float, real, datetime, smalldatetime, char, varchar, text, nchar, nvarchar, ntext, binary, varbinary, or image
+- *length* is the length of the resulting datatype, specifically for string datatypes like varchar. 
+- *expression* is the value to convert
+- *style* is the format to convert. 
 
 *TO_DATE()*
 
