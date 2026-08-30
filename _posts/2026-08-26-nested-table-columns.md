@@ -55,6 +55,8 @@ As you can see, we have our vehcile type and drop location as our key columns. E
 
 Section 1.2.2 GUI
 
+The advanced edtior is one way to group columns into tables. The second way is using the GUI in Power Query. In the *Home* tab, you'll click on your column(s) and select *Group By* in the ribbon. A new window will pop up where you can edit the *New Column Name* and select an *Operation*. For our purposes, we will select *All Rows* to create the table column.
+
 ![](/assets/images/power_query_group_by_gui.png){:width="300px"}
 
 
