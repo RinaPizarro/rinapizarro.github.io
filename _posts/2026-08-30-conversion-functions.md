@@ -23,4 +23,12 @@ Although there are several conversions that can occur in SQL, and these conversi
 
 ![](/assets/images/sql_data_conversion_chart.png){:width="300px"}
 
-&nbsp;
+*TO_DATE()*
+
+```
+TO_DATE(string, format_mask)
+```
+
+- *string* will be your column name or target string
+- *format_mask* tells your database how to read the string. This could be something like *'yyyy-mm-dd'*
+
