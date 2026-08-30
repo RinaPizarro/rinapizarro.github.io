@@ -56,9 +56,15 @@ TRIM('Hello World    ')
 
 *CONCAT_WS()*
 
+- Join multiple string with a concatenator
+
+```
+SELECT CONCAT_WS('_', 'shoes', 'for', 'sale');
+
+// output: shoes_for_sale
+```
 
 
-&nbsp;
 
 ### Section 2 Finding Substrings
 
