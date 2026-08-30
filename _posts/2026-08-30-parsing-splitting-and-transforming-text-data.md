@@ -24,9 +24,10 @@ TransformedNames = Table.TransformColumns(
 
 Section 1.2 Parsing and Extracting Substrings
 
+- *Text.Start(text, count)* returns the first count characters from a string
+- *Text.End(text, count)* returns the last count characters.
 
 
-&nbsp;
 
 &nbsp;
 
