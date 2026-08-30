@@ -94,6 +94,3 @@ GROUP BY department_id
 HAVING AVG(salary) > 75000;
 ```
 
-
-
-&nbsp;
