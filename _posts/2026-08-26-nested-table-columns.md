@@ -77,8 +77,8 @@ Table.TransformColumns(
 - *table* will be the previous step
 - *transformOperations* will take the form of *{Column name as string, transformation, optional new column type}*
 
+Now that we understand how the function works, lets use this function in our query. 
 
 
-&nbsp;
 
 &nbsp;
