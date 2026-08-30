@@ -45,3 +45,14 @@ Suppose we have a table about Uber drives. Let's say we want to group the rides 
 - *Key* is filled by our two columns in the form of a list as *{"Vehicle Type", "Drop Location"}.* Notice how our column names are strings in a list.
 - *aggregatedColumns* are also in the form of a list. We begin by specifying the output column name as *All Rides*. We then specify the type as table with a record of column names to be stores within our nested tables.
 
+Our output end up looking something like this:
+
+![](/assets/images/power_query_nested_table_columns.png){:width="300px"}
+
+
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
