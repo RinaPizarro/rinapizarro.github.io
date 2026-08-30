@@ -51,8 +51,8 @@ Our output end up looking something like this:
 
 As you can see, we have our vehcile type and drop location as our key columns. Everything else got wrapped into our new column called *All Rides*.
 
+![](/assets/images/power_query_group_by_gui.png){:width="300px"}
 
 
-&nbsp;
 
 &nbsp;
