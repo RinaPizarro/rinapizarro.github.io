@@ -38,10 +38,8 @@ Section 1.4 Example of Web.Contents() and json.documents()
 
 The best way to understand these functions is to give an example. Therefore, let's use 
 
-## Section 2 
+## Section 2
 
 
-
-&nbsp;
 
 &nbsp;
