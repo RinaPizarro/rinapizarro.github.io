@@ -22,7 +22,7 @@ TransformedNames = Table.TransformColumns(
 )
 ```
 
-Section 1.2 Parsing and Extracting substrings
+Section 1.2 Parsing and Extracting Substrings
 
 
 
