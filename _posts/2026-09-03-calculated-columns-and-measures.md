@@ -50,3 +50,17 @@ If you have regions of the United States (East, West, South, North) you could do
 3. Create a measure that calculates the sum of the calculated columns called.
 4. Please the measure in the visual. All four regions will remain the same but now we get the sum of each region's products sold.
 
+Measures are great for
+
+- aggregations (sum, count, max)
+- you want the calculation to respond dynamically to filters and slicers
+- you're creating KPIs or metrics for dashboards
+- you need the calculation to change based on the visual context
+
+Calculated Columns are great for
+
+- You need to perform row-by-row calculations that don't change based on filters
+- You want to use the result for grouping, filtering, or slicing
+- You need the calculation to be stored permanently with the data
+- You're creating categories or classifications at the row level
+
