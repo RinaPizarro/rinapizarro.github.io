@@ -24,4 +24,16 @@ In a real world example, a calculated columns produce would be best if you are t
 Total = SalesTable[Price] * SalesTables[Quantity]
 ```
 
-This is an example of how we would use a calculated columns when we need a value for each output.
+This is an example of how we would use a calculated columns when we need a value for each output. You could also use categories. For example, we would make a calculated columns called "Quality" that tells us the quality of each item.
+
+```
+Quality =
+SWITCH(
+     TRUE(),
+     SalesTable[Item] = "Book", "Low",
+     SalesTable[Item] = "Pens", "Low",
+     "High"
+      )
+)
+```
+
