@@ -26,3 +26,4 @@ The next important part is the USERELATIONSHIP must be used inside CALCULATE. It
 
 ### Section 2 Cross Filter
 
+Use Relationship switches which relationship, whereas Cross Filter controls *how* a specific relationship propagates filters — and it can even disable a relationship entirely.
