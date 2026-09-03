@@ -37,3 +37,16 @@ SWITCH(
 )
 ```
 
+Now if we want the sum of all the total prices, we can use a measure:
+
+```
+TotalSum = SUM(SalesTable[Total])
+```
+
+If you have regions of the United States (East, West, South, North) you could do the following
+
+1. Create a calculated columns called that calculates the total of products sold in each region
+2. Create a visual that shows each region in the United States
+3. Create a measure that calculates the sum of the calculated columns called.
+4. Please the measure in the visual. All four regions will remain the same but now we get the sum of each region's products sold.
+
