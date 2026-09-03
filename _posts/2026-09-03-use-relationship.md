@@ -20,3 +20,6 @@ USERELATIONSHIP(<column1>, <column2>)
 
 The relationship must exist in your data model for this to work. It will completely override your active relationship. If three measures with three different relationships are placed in one visual, all three measure outputs will show up without affecting each other.
 
+
+
+The next important part is the USERELATIONSHIP must be used inside CALCULATE. It is a filter modifier, not a stand alone function.
