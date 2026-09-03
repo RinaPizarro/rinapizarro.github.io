@@ -18,5 +18,5 @@ If you want to use an inactive relationship, you will need to tell PowerBI to us
 USERELATIONSHIP(<column1>, <column2>)
 ```
 
-The relationship must exist in your data model for this to work. It will completely override your active relationship.
+The relationship must exist in your data model for this to work. It will completely override your active relationship. If three measures with three different relationships are placed in one visual, all three measure outputs will show up without affecting each other.
 
