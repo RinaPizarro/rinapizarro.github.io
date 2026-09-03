@@ -13,3 +13,10 @@ PowerBi allows for one active relationship at a time. If Table A has CustomerID 
 Having only one active relationship prevents confusion for PowerBI. If a lookup table had both CustomerID and ProductID as the key, PowerBi wouldn't know which to look at.
 
 If you want to use an inactive relationship, you will need to tell PowerBI to use the inactive relationship with USERELATIONSHIP().
+
+```
+USERELATIONSHIP(<column1>, <column2>)
+```
+
+The relationship must exist in your data model for this to work. It will completely override your active relationship.
+
