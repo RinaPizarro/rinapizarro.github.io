@@ -11,3 +11,5 @@ PowerBi allows for one active relationship at a time. If Table A has CustomerID 
 2. Many Side (Fact table)
 
 Having only one active relationship prevents confusion for PowerBI. If a lookup table had both CustomerID and ProductID as the key, PowerBi wouldn't know which to look at.
+
+If you want to use an inactive relationship, you will need to tell PowerBI to use the inactive relationship with USERELATIONSHIP().
